@@ -1,4 +1,4 @@
-import "./styles/main.css";
+import "./styles/index.scss";
 
 const testObj = {
   key1: "hi",
