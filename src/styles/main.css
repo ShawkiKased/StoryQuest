@@ -1,0 +1,36 @@
+
+/* // LAYOUT */
+
+body {
+  background-color: lighten(green, 40%);
+  color: green;
+  height: 97vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* // COMPONENTS */
+.card {
+  background: white;
+  height: 50vh;
+  width: 50vw;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+.image-card {
+  background-image: url("../images/yoda-stitch.jpg");
+  background-position: center;
+}
+
+/* // TYPOGRAPHY */
+h2 {
+  font-size: 3rem;
+}
