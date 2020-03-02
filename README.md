@@ -9,7 +9,8 @@ My Project will be a unqiue mix of a game and a demo showcase. StoryQuest will b
 In StoryQuest, the User will be able to:
 * Adventure through a map of locations
 * Get into unique scenario's depending on their status
-* Have multiple options available that makes the adventure deep.
+* Have multiple options available that makes the adventure deep. 
+
 In Adition, this project can possibly include:
 * Have the ability to change the overall map.
 * Turn based battles based on status.
