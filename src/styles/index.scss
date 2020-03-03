@@ -4,7 +4,7 @@
   box-shadow: 3px 3px 5px 5px $color, 1px 0px 1px $color;
 }
 
-$main-color: green;
+$main-color: brown;
 $accent-color: darken($main-color, 10%);
 $background-color: lighten($main-color, 40%);
 
@@ -26,21 +26,15 @@ body {
 }
 
 // COMPONENTS
-.card {
-  background: white;
-  height: 50vh;
-  width: 50vw;
+
+.main-game {
+  height: 90vh;
+  width: 90vw;
   border-radius: 15px;
   margin-top: 15px;
-  @include basic-box-shadow($accent-color);
-}
-
-.image-card {
-  background-image: url("../images/yoda-stitch.jpg");
+  background-image: url("../images/map.png");
   background-position: center;
-}
-
-// TYPOGRAPHY
-h2 {
-  font-size: 3rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  @include basic-box-shadow($accent-color);
 }
