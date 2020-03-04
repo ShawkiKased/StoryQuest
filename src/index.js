@@ -18,16 +18,23 @@ window.addEventListener("DOMContentLoaded", () => {
   // mainGame.classList.add("center", "main-game");
   // document.body.appendChild(mainGame);
 
-  let startButton = document.getElementById('start');
-  let mainDialog = document.getElementById('mainDialog');
+  // let startButton = document.getElementById('start');
+  // let mainDialog = document.getElementById('mainDialog');
+  // let changeButton = document.getElementById('change');
 
-  startButton.addEventListener('click', function onOpen() {
-    if (typeof mainDialog.showModal === "function") {
-      mainDialog.showModal();
-    } else {
-      alert("The <dialog> API is not supported by this browser");
-    }
-  });
+  // startButton.addEventListener('click', function onOpen() {
+  //   if (typeof mainDialog.showModal === "function") {
+  //     mainDialog.showModal();
+  //   } else {
+  //     alert("The <dialog> API is not supported by this browser");
+  //   }
+  // });
+
+  // changeButton.addEventListener('click', function changePage(url) {
+  //     location.replace(url);
+  // });
+
+
 });
 
 
