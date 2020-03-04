@@ -7,8 +7,8 @@ My Project will be a single page game. StoryQuest will be an interractive Story 
 ## Functionality and MVP's
 
 In StoryQuest, the User will be able to:
-* Adventure through a map of locations
-* Get into unique scenario's depending on their status
+* Adventure through a map of locations through text boxes
+* Get into unique scenario's depending on your current status.
 * Have multiple options available that makes the adventure deep. 
 
 In Adition, this project can possibly include:
@@ -23,7 +23,7 @@ In Adition, this project can possibly include:
 ## Architecture and Technology
 
 * DOM Manipulation will be used to render a map and text message boxes/modals.
-* Need Boxes for Text and Scenario's to appear that the player can interract with
+* Need Boxes for Text and Scenario's to appear that the player can interract with. I will be doing this by storing the text objects inside of an array.
 * Mostly click based, using onclick functions/event listeners
 * Since everything will be through text boxes, instructions/tutorial will also be in said format.
 
@@ -31,6 +31,7 @@ In Adition, this project can possibly include:
 * Player starts on the base area. Gets to choose where on the map to go.
 * A Scenario will pop up, maybe asking if they have an item, or gives them a chance to be explained something
 * Certain Scenario's will stop the player from entering or fight based on whether they have an item or not
+* Scenario's themselves will be chosed from the original array of message objects, including with answers and continuations
 
 ## Implementation TimeLine
 
