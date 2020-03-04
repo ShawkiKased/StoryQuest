@@ -7,8 +7,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const mainGame = document.createElement("div");
   mainGame.classList.add("center", "main-game");
   document.body.appendChild(mainGame);
-
+  
 });
+
 
 // <!DOCTYPE html>
 // <html>
