@@ -1,4 +1,41 @@
 <>
+<dialog id="mainDialog">
+    <form method="dialog">
+    <p>Welcome to StoryQuest!</p>
+    <menu>
+        <button id="confirmBtn" value="default">Continue</button>
+    </menu>
+    </form>
+</dialog>
+
+<menu>
+    <button id="start">Start</button>
+</menu>
+</>
+
+let startButton = document.getElementById('start');
+let mainDialog = document.getElementById('mainDialog');
+let outputBox = document.querySelector('output');
+let selectEl = document.querySelector('select');
+let continueBtn = document.getElementById('continueBtn');
+
+startButton.addEventListener('click', function onOpen() {
+    if (typeof mainDialog.showModal === "function") {
+        mainDialog.showModal();
+    } else {
+        alert("The <dialog> API is not supported by this browser");
+    }
+});
+
+
+
+
+
+
+
+
+
+{/* <>
 <dialog id="favDialog">
     <form method="dialog">
         <p>
@@ -43,4 +80,4 @@ selectEl.addEventListener('change', function onSelect(e) {
 
 favDialog.addEventListener('close', function onClose() {
     outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
-});
+}); */}
