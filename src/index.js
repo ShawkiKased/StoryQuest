@@ -3,11 +3,31 @@ import Story from "./story";
 
 
 window.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("center");
-  const mainGame = document.createElement("div");
-  mainGame.classList.add("center", "main-game");
-  document.body.appendChild(mainGame);
-  
+  // const div = document.querySelector('div');
+  // let winWidth = window.innerWidth;
+  // let winHeight = window.innerHeight;
+  // div.style.width = winWidth + 'px';
+  // div.style.height = winHeight + 'px';
+  // window.onresize = function() {
+  // winWidth = window.innerWidth;
+  // winHeight = window.innerHeight;
+  // div.style.width = winWidth + 'px';
+  // div.style.height = winHeight + 'px';};
+  // document.body.classList.add("center");
+  // const mainGame = document.createElement("div");
+  // mainGame.classList.add("center", "main-game");
+  // document.body.appendChild(mainGame);
+
+  let startButton = document.getElementById('start');
+  let mainDialog = document.getElementById('mainDialog');
+
+  startButton.addEventListener('click', function onOpen() {
+    if (typeof mainDialog.showModal === "function") {
+      mainDialog.showModal();
+    } else {
+      alert("The <dialog> API is not supported by this browser");
+    }
+  });
 });
 
 
