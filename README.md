@@ -15,9 +15,10 @@ In Adition, this project can possibly include:
 * Have the ability to change the overall map.
 * Turn based battles based on status.
 
-## WireFrame
+## WireFrame && FileStructure
 
 ![WireFrame](https://i.imgur.com/dzY4DVr.png)
+![FileStructure](https://i.imgur.com/I9giEdj.png)
 
 ## Architecture and Technology
 
