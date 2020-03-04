@@ -2,7 +2,7 @@
 
 ## Background and Overview
 
-My Project will be a unqiue mix of a game and a demo showcase. StoryQuest will be an interractive Story Text Based game. You will be told a story with your Main Character through various and interractive Message Boxes. These will give you a scenario and options on how to proceed, maybe you'll be a in forest, or a cave or fighting enemies. The choice will effect the outcome and all the while the background will be a map telling you where your path has lead you.
+My Project will be a single page game. StoryQuest will be an interractive Story Text Based game. You will be told a story with your Main Character through various and interractive Message Boxes. These will give you a scenario and options on how to proceed, maybe you'll be a in forest, or a cave or fighting enemies. The choice will effect the outcome and all the while the background will be a map telling you where your path has lead you.
 
 ## Functionality and MVP's
 
@@ -21,12 +21,20 @@ In Adition, this project can possibly include:
 
 ## Architecture and Technology
 
-* Need to have a clean map that can properly visualize where the player is
+* DOM Manipulation will be used to render a map and text message boxes/modals.
 * Need Boxes for Text and Scenario's to appear that the player can interract with
-* Need to do this with just Vanilla JavaScript, CSS3 and HTML5, maybe even with Canvas.
-* Need to read up on JavaScript functions that can help meld these things together properly
+* Mostly click based, using onclick functions/event listeners
+* Since everything will be through text boxes, instructions/tutorial will also be in said format.
+
+## Game Structure Logic
+* Player starts on the base area. Gets to choose where on the map to go.
+* A Scenario will pop up, maybe asking if they have an item, or gives them a chance to be explained something
+* Certain Scenario's will stop the player from entering or fight based on whether they have an item or not
 
 ## Implementation TimeLine
 
 * Spend day 1 properly visualizing how to get the correct technology and how the project will be structured, as well as making sure my project setup is working to begin with.
-* WIP
+* Spend Day 2 getting proper mechanics down, getting a map to render as an example
+* Spend Day 3 finding out how to make pop ups, modal styles and maybe even add events
+* Spend Day 4 implmenting how the map changes or scenario for the player
+* Spend Day 5 finishing up and making sure all the components work a proper product

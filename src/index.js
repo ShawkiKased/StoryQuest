@@ -1,13 +1,6 @@
 import "./styles/index.scss";
 
-const testObj = {
-  key1: "hi",
-  key2: {
-    key3: "Hello"
-  }
-};
 
-const greeting = testObj?.key2?.key3 || testObj.key1;
 window.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("center");
   const mainGame = document.createElement("div");
