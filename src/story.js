@@ -73,6 +73,233 @@ export const story = [
         ]
     },
     {
+        id: 'W1M-E',
+        text: 'You see a bright light shine on you through the path, but alas, you are mysteriously back at the Maze Entrance',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W1M'
+            }
+        ]
+    },
+    {
+        id: 'W1M-1',
+        text: 'You started Straight and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-1-1'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-1-2'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-1-3'
+            }
+        ]
+    },
+    {
+        id: 'W1M-1-1',
+        text: 'You went Straight again and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-1-2',
+        text: 'You went Left and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-1-3',
+        text: 'You went Right and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-2',
+        text: 'You Started Left and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-2-1'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-2-2'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-2-3'
+            }
+
+        ]
+    },
+    {
+        id: 'W1M-2-1',
+        text: 'You went Straight and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-2-2',
+        text: 'You went Left again and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-2-3',
+        text: 'You went Right and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-3',
+        text: 'You Started Right and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-3-1'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-3-2'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-3-3'
+            }
+        ]
+    },
+    {
+        id: 'W1M-3-1',
+        text: 'You went Straight and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-3-2',
+        text: 'You went Left and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-3-3',
+        text: 'You went Right again and find 3 more paths',
+        options: [
+            {
+                text: 'Continue Straight',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Left',
+                nextText: 'W1M-E'
+            },
+            {
+                text: 'Continue Right',
+                nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
         id: 'W1G',
         text: 'Goblin: I know the way through the maze, but i require something delicious',
         options: [
@@ -124,6 +351,14 @@ export const story = [
         id: 'V-S',
         text: 'ShopKeeper: Welcome Hero! Take a look at my wares, anything fits your fancy for your Adventure?',
         options: [
+            {
+                text: 'Lanturn',
+                nextText: 'V-SL'
+            },
+            {
+                text: 'Nothing, Thank You',
+                nextText: 'V'
+            }
         ]
     },
     {
@@ -150,7 +385,7 @@ export const story = [
     },
     {
         id: 'V-PL',
-        text: 'Can you not bother us please? We are enjoying our company in these dark days',
+        text: 'Lovely Couple: Can you not bother us please? We are enjoying our company in these dark days',
         options: [
             {
                 text: 'Go Back',
