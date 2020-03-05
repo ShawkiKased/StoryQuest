@@ -22,16 +22,15 @@ In Adition, this project can possibly include:
 
 ## Architecture and Technology
 
-* DOM Manipulation will be used to render a map and text message boxes/modals.
-* Need Boxes for Text and Scenario's to appear that the player can interract with. I will be doing this by storing the text objects inside of an array.
-* Mostly click based, using onclick functions/event listeners
-* Since everything will be through text boxes, instructions/tutorial will also be in said format.
+* DOM Manipulation will be used to render a text box that will be where the main game is played.
+* The Story and progression will be contained in an array of plot points labeled by ID's.
+* Mostly click based, using onclick functions/event listeners.
 
 ## Game Structure Logic
 * Player starts on the base area. Gets to choose where on the map to go.
 * A Scenario will pop up, maybe asking if they have an item, or gives them a chance to be explained something
 * Certain Scenario's will stop the player from entering or fight based on whether they have an item or not
-* Scenario's themselves will be chosed from the original array of message objects, including with answers and continuations
+* The Story Array will also contain states which is the main function of the player's context, like whether they have an item or not.
 
 ## Implementation TimeLine
 

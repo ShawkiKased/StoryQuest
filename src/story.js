@@ -1,7 +1,7 @@
 const textNodes = [
     {
         id: 1,
-        text: 'You wake up in a strange place and you see a jar of blue goo near you.',
+        text: 'Welcome to StoryQuest! We need only the bravest and smartest Heroes to embark on this Journey! If your up to the task!',
         options: [
             {
                 text: 'Take the goo',
