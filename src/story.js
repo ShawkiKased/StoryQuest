@@ -1,7 +1,7 @@
 export const story = [
     {
         id: 1,
-        text: 'Welcome to StoryQuest! Embark on an epic journey that requires only the most Brain and Brawn Individuals out there! If your ready to take this task, click Start to embark!',
+        text: 'Queen Elizabeth: Welcome Hero, we need your help,the evil King Shawki is ruling the Kingdom with an iron fist! We need someone who is both brave and smart! You will need to traverse the Kingdom in search of the elemental stones that can make you strong enough to face him! Good Luck and be careful on your long journey Hero!',
         options: [
             {
                 text: 'Start!',
@@ -11,136 +11,24 @@ export const story = [
     },
     {
         id: 2,
-        text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+        text: 'Where would you like to go hero?',
         options: [
             {
-                text: 'Trade the goo for a sword',
-                requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, sword: true },
+                text: 'The Woods',
                 nextText: 3
             },
             {
-                text: 'Trade the goo for a shield',
-                requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, shield: true },
-                nextText: 3
-            },
-            {
-                text: 'Ignore the merchant',
-                nextText: 3
-            }
-        ]
-    },
-    {
-        id: 3,
-        text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
-        options: [
-            {
-                text: 'Explore the castle',
+                text: 'The Caves',
                 nextText: 4
             },
             {
-                text: 'Find a room to sleep at in the town',
+                text: 'The Village',
                 nextText: 5
             },
             {
-                text: 'Find some hay in a stable to sleep in',
+                text: 'The Tower of King Shawki',
+                requiredState: (currentState) => currentState.earthStone && currentState.waterStone && currentState.fireStone,
                 nextText: 6
-            }
-        ]
-    },
-    {
-        id: 4,
-        text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
-        options: [
-            {
-                text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 5,
-        text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
-        options: [
-            {
-                text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 6,
-        text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
-        options: [
-            {
-                text: 'Explore the castle',
-                nextText: 7
-            }
-        ]
-    },
-    {
-        id: 7,
-        text: 'While exploring the castle you come across a horrible monster in your path.',
-        options: [
-            {
-                text: 'Try to run',
-                nextText: 8
-            },
-            {
-                text: 'Attack it with your sword',
-                requiredState: (currentState) => currentState.sword,
-                nextText: 9
-            },
-            {
-                text: 'Hide behind your shield',
-                requiredState: (currentState) => currentState.shield,
-                nextText: 10
-            },
-            {
-                text: 'Throw the blue goo at it',
-                requiredState: (currentState) => currentState.blueGoo,
-                nextText: 11
-            }
-        ]
-    },
-    {
-        id: 8,
-        text: 'Your attempts to run are in vain and the monster easily catches.',
-        options: [
-            {
-                text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 9,
-        text: 'You foolishly thought this monster could be slain with a single sword.',
-        options: [
-            {
-                text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 10,
-        text: 'The monster laughed as you hid behind your shield and ate you.',
-        options: [
-            {
-                text: 'Restart',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id: 11,
-        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
-        options: [
-            {
-                text: 'Congratulations. Play Again.',
-                nextText: -1
             }
         ]
     }
