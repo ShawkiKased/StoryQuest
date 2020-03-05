@@ -1,5 +1,5 @@
 import "./styles/index.scss";
-import { story } from ".story";
+import { story } from "./story";
 
 window.addEventListener("DOMContentLoaded", () => {
   const textElement = document.getElementById('text')
@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function showTextNode(textNodeIndex) {
-    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+    const textNode = story.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
       optionButtonsElement.removeChild(optionButtonsElement.firstChild)
@@ -42,6 +42,8 @@ window.addEventListener("DOMContentLoaded", () => {
     state = Object.assign(state, option.setState)
     showTextNode(nextTextNodeId)
   }
+
+  story;
 
   startGame()
 })

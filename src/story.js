@@ -1,15 +1,10 @@
-const textNodes = [
+export const story = [
     {
         id: 1,
-        text: 'Welcome to StoryQuest! We need only the bravest and smartest Heroes to embark on this Journey! If your up to the task!',
+        text: 'Welcome to StoryQuest! Embark on an epic journey that requires only the most Brain and Brawn Individuals out there! If your ready to take this task, click Start to embark!',
         options: [
             {
-                text: 'Take the goo',
-                setState: { blueGoo: true },
-                nextText: 2
-            },
-            {
-                text: 'Leave the goo',
+                text: 'Start!',
                 nextText: 2
             }
         ]
