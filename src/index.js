@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function startGame() {
     state = {}
-    showTextNode(1)
+    showTextNode(0)
   }
 
   function showTextNode(textNodeIndex) {
