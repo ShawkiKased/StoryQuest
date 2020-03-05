@@ -201,11 +201,26 @@ export const story = [
             },
             {
                 text: 'Continue Left',
-                nextText: 'W1M-E'
+                nextText: 'W1M-GB'
             },
             {
                 text: 'Continue Right',
                 nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-GB',
+        text: 'You find a tree, it seems to be carrying Goblin Berries',
+        options: [
+            {
+                text: 'Take the Berries and Continue',
+                setState: { goblinBerry: true },
+                nextText: 'W1M'
+            },
+            {
+                text: 'Continue without Berries',
+                nextText: 'W1M'
             }
         ]
     },
@@ -291,11 +306,26 @@ export const story = [
             },
             {
                 text: 'Continue Left',
-                nextText: 'W1M-E'
+                nextText: 'W1M-SF'
             },
             {
                 text: 'Continue Right',
                 nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-SF',
+        text: 'You find a tree, and it seems to contain Star Fruit',
+        options: [
+            {
+                text: 'Take the Star Fruit and Continue',
+                setState: { starFruit: true },
+                nextText: 'W1M'
+            },
+            {
+                text: 'Continue without taking Star Fruit',
+                nextText: 'W1M'
             }
         ]
     },
@@ -358,6 +388,22 @@ export const story = [
             {
                 text: 'Nothing, Thank You',
                 nextText: 'V'
+            }
+        ]
+    },
+    {
+        id: 'V-SL',
+        text: 'ShopKeeper: I will trade you a Lanturn for a Star Fruit',
+        options: [
+            {
+                text: 'Back',
+                nextText: 'V-S'
+            },
+            {
+                text: 'Trade Star Fruit for Lanturn',
+                requiredState: (currentState) => currentState.starFruit,
+                setState: { starFruit: false, lanturn: true},
+                nextText: 'V-S'
             }
         ]
     },
