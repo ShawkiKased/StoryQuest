@@ -1,134 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./dist/main.css" />
-    <title>Document</title>
-    <style>
-      body {
-        margin: 0;
-      }
-    
-      div {
-        box-sizing: border-box;
-        background-image: url("./src/images/map.jpg");
-        border: 10px solid white;
-        background-position: center;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-      }
-    </style>
-  </head>
-
-  <body>
-    <script src="./dist/main.js"></script>
-    <dialog id="mainDialog">
-      <form method="dialog">
-        <p>Welcome to StoryQuest!</p>
-        <menu>
-          <button id="confirmBtn" value="default">Continue</button>
-        </menu>
-      </form>
-    </dialog>
-    <menu>
-      <button id="start">Start</button>
-    </menu>
-    <menu>
-    <button id="change" onclick=changePage("test.html")>Test</button>
-    </menu>
-  </body>
-</html> -->
-
-
-<!-- <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Simple DOM example</title>
-    <style>
-      .highlight {
-        color: white;
-        background-color: black;
-        padding: 10px;
-        width: 250px;
-        text-align: center;
-      }
-    </style>
-  </head>
-
-  <body>
-    <section>
-      <img src="dinosaur.png"
-        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-      <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
-  </body>
-
-  <script>
-    const link = document.querySelector('a');
-    link.textContent = 'Mozilla Developer Network';
-    link.href = 'https://developer.mozilla.org';
-    const sect = document.querySelector('section');
-    const para = document.createElement('p');
-    para.textContent = 'We hope you enjoyed the ride.';
-    sect.appendChild(para);
-    const text = document.createTextNode(' — the premier source for web development knowledge.');
-    const linkPara = document.querySelector('p');
-    linkPara.appendChild(text);
-    sect.appendChild(linkPara);
-    // sect.removeChild(linkPara);
-    // linkPara.remove();
-    // linkPara.parentNode.removeChild(linkPara);
-    para.setAttribute('class', 'highlight');
-
- </script>
-</html> -->
-
-
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Window resize example</title>
-    <style>
-      body {
-        margin: 0;
-      }
-
-      div {
-        box-sizing: border-box;
-        background-image: url("./src/images/map.jpg");
-        border: 10px solid white;
-        background-position: center;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-      }
-    </style>
-  </head>
-  <body>
-
-    <div>
-
-    </div>
-
-    <script>
-      const div = document.querySelector('div');
-      let winWidth = window.innerWidth;
-      let winHeight = window.innerHeight;
-      div.style.width = winWidth + 'px';
-      div.style.height = winHeight + 'px';
-      window.onresize = function() {
-        winWidth = window.innerWidth;
-        winHeight = window.innerHeight;
-        div.style.width = winWidth + 'px';
-        div.style.height = winHeight + 'px';
-      }
-    </script>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,11 +7,14 @@
   <title>Story Quest</title>
 </head>
 <body>
+  <script src="./dist/main.js"></script>
   <div class="container">
-    <div id="text">Ready To Start Your Adventure?</div>
-    <div id="option-buttons" class="buttons">
+    <div id="text">Text</div>
+    <div id="option-buttons" class="btn-grid">
       <button class="btn">Yes</button>
       <button class="btn">No</button>
+      <button class="btn">Maybe</button>
+      <button class="btn">I don't know</button>
     </div>
   </div>
 </body>
