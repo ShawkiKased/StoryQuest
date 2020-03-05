@@ -1,5 +1,5 @@
 import "./styles/index.scss";
-
+import { story } from ".story";
 
 window.addEventListener("DOMContentLoaded", () => {
   const textElement = document.getElementById('text')
