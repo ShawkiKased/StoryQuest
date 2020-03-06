@@ -409,12 +409,12 @@ export const story = [
             {
                 text: 'Use Lantern',
                 requiredState: (currentState) => currentState.lanturn,
-                nextText: 'W2L'
+                nextText: 'W2-'
             }
         ]
     },
     {
-        id: 'W2L',
+        id: 'W2-',
         text: 'You used your lanturn to light the way, you are now able to see through the cave',
         options: [
             {
@@ -429,11 +429,11 @@ export const story = [
         options: [
             {
                 text: 'Go to the Left',
-                nextText: 'W2L2'
+                nextText: 'W2L'
             },
             {
                 text: 'Get closer to the Minecart',
-                nextText: 'W2M2'
+                nextText: 'W2M'
             },
             {
                 text: 'Go to the Right',
@@ -444,6 +444,37 @@ export const story = [
                 nextText: 'W2'
             }
         ]
+    },
+    {
+        id: 'W2L',
+        text: 'You come closer to the left Path but a big boulder is blocking the way, your going to need to smash it somehow',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W2E'
+            },
+            {
+                text: 'Use Hammer',
+                requiredState: (currentState) => currentState.hammer,
+                nextText: 'W2L2'
+            }
+        ]
+    },
+    {
+        id: 'W2M',
+        text: 'You came closer to the Minecart, looks like it could be rideable, but the lever is missing',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W2E'
+            },
+            {
+                text: 'Use Hammer',
+                requiredState: (currentState) => currentState.lever,
+                nextText: 'W2M2'
+            }
+        ]
+
     },
     {
         id: 'V',
