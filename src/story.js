@@ -11,7 +11,7 @@ export const story = [
     },
     {
         id: 1,
-        text: 'Where would you like to go hero?',
+        text: 'Where would you like to go Hero?',
         options: [
             {
                 text: 'The Woods',
@@ -338,9 +338,20 @@ export const story = [
                 nextText: 'W1M'
             },
             {
-                text: 'Give Goblin GoblinBerry',
+                text: 'Give Goblin GoblinBerries',
                 requiredState: (currentState) => currentState.goblinBerry,
                 nextText: 'W1GE'
+            }
+        ]
+    },
+    {
+        id: 'W1GE',
+        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH* STRAIGHT *MUNCH MUNCH MUNCH* RIGHT *MUNCH MUNCH MUNCH* LEFT *MUNCH MUNCH MUNCH MUNCH*',
+        options: [
+            {
+                text: 'Continue',
+                setState: {goblinBerry: false},
+                nextText: 'W1M'
             }
         ]
     },
@@ -409,7 +420,7 @@ export const story = [
     },
     {
         id: 'V-P',
-        text: 'You go to the center of the village and see the Village Folk doing their daily routines. Who would you like to talk to?',
+        text: 'You go to the center of the village and see the village folk doing their daily routines. Who would you like to talk to?',
         options: [
             {
                 text: 'Lovely Couple by the well',
@@ -441,7 +452,7 @@ export const story = [
     },
     {
         id: 'V-PK',
-        text: '"Stop running away so fast Cindy, i cant tag you", "Try to keep up Tommy", "Hey Gabriel i heard the well has a dungeon inside of it", "Well i heard you can find a GoblinBerry Tree if you keep going left in the forest Maze"',
+        text: '"Stop running away so fast Cindy, i cant tag you", "Try to keep up Tommy", "Hey Gabriel, i heard the well is haunted", "Well I heard you can find a GoblinBerry Tree if you stay left in the forest Maze"',
         options: [
             {
                 text: 'Go Back',
@@ -459,7 +470,6 @@ export const story = [
             },
             {
                 text: 'About the FireStone',
-                requiredState: (currentState) => currentState.earthStone,
                 nextText: 'V-PO2'
             },
             {
@@ -475,7 +485,17 @@ export const story = [
     },
     {
         id: 'V-PO1',
-        text: 'Wise Old Man: The EarthStone is somewhere hidden in the woods, your also going to have to find your way through the maze. Your going to have to fight a Forest Troll, so please be careful.',
+        text: 'Wise Old Man: The EarthStone is hidden in the woods, but youll need to find your way through a tricky maze.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'V-PO'
+            }
+        ]
+    },
+    {
+        id: 'V-PO2',
+        text: 'Wise Old Man: The FireStone is hidden in the caves, although without a light source, it would be futile to go there now.',
         options: [
             {
                 text: 'Continue',
