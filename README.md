@@ -18,7 +18,7 @@ In Adition, this project can possibly include:
 
 ## WireFrame && FileStructure
 
-![WireFrame](https://i.imgur.com/dzY4DVr.png)
+![WireFrame](https://i.imgur.com/YGCZElE.png)
 ![FileStructure](https://i.imgur.com/Js6uwzP.png)
 
 ## Architecture and Technology
