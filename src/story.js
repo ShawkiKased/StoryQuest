@@ -437,14 +437,17 @@ export const story = [
         options: [
             {
                 text: 'Lanturn',
+                requiredState: (currentState) => !currentState.lanturn,
                 nextText: 'V-SL'
             },
             {
                 text: 'Hammer',
+                requiredState: (currentState) => !currentState.hammer,
                 nextText: 'V-SH'
             },
             {
                 text: 'Life Potion',
+                requiredState: (currentState) => !currentState.lifePotion,
                 nextText: 'V-SP'
             },
             {

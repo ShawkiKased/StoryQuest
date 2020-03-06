@@ -11,16 +11,17 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: lighten(brown, 40%);
+  background-color: #F2C545;
 }
 
 .container {
   width: 800px;
   max-width: 80%;
-  background-color: white;
+  background-color: #C73B0B;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
+  border: 3px solid #978E43;
 }
 
 .btn-grid {
@@ -31,8 +32,7 @@ body {
 }
 
 .btn {
-  background-color: hsl(200, 100%, 50%);
-  border: 1px solic hsl(200, 100%, 30%);
+  background-color: darkolivegreen;
   border-radius: 5px;
   padding: 5px 10px;
   color: white;
@@ -40,5 +40,5 @@ body {
 }
 
 .btn:hover {
-  border-color: black;
+  border-color: #350608;
 }
