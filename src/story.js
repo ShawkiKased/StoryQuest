@@ -409,7 +409,17 @@ export const story = [
             {
                 text: 'Use Lantern',
                 requiredState: (currentState) => currentState.lanturn,
-                nextText: 'W2-1'
+                nextText: 'W2L'
+            }
+        ]
+    },
+    {
+        id: 'W2L',
+        text: 'You used your lanturn to light the way, you are now able to see through the cave',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W2E'
             }
         ]
     },

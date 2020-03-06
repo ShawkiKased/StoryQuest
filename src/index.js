@@ -8,8 +8,15 @@ window.addEventListener("DOMContentLoaded", () => {
   let state = {}
 
   function startGame() {
-    state = {}
-    showTextNode(0)
+    let curState = JSON.parse(localStorage.getItem('cState'))
+    let next = JSON.parse(localStorage.getItem('next'))
+    if (curState && next ) {
+      state = curState
+      showTextNode(next)
+    } else {
+      state = {}
+      showTextNode(0)
+    }
   }
 
   function showTextNode(textNodeIndex) {
@@ -40,6 +47,8 @@ window.addEventListener("DOMContentLoaded", () => {
       return startGame()
     }
     state = Object.assign(state, option.setState)
+    localStorage.setItem( 'cState', JSON.stringify(state))
+    localStorage.setItem('next', JSON.stringify(nextTextNodeId))
     showTextNode(nextTextNodeId)
   }
 
