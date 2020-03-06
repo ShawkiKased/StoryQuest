@@ -424,6 +424,28 @@ export const story = [
         ]
     },
     {
+        id: 'W2E',
+        text: 'Going deeper in the cave, you find yourself in a Mines. There 2 two paths and a minecart in the middle',
+        options: [
+            {
+                text: 'Go to the Left',
+                nextText: 'W2L2'
+            },
+            {
+                text: 'Get closer to the Minecart',
+                nextText: 'W2M2'
+            },
+            {
+                text: 'Go to the Right',
+                nextText: 'W2R'
+            },
+            {
+                text: 'Go Back',
+                nextText: 'W2'
+            }
+        ]
+    },
+    {
         id: 'V',
         text: 'You went to the village, there are plenty of people to see, what would you like to do?',
         options: [

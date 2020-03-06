@@ -17,9 +17,12 @@ window.addEventListener("DOMContentLoaded", () => {
       state = {}
       showTextNode(0)
     }
+    // state = {}
+    // showTextNode(0)
   }
 
   function showTextNode(textNodeIndex) {
+    debugger
     const textNode = story.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
