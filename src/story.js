@@ -146,11 +146,54 @@ export const story = [
             },
             {
                 text: 'Continue Left',
-                nextText: 'W1M-E'
+                nextText: 'W1M-S'
             },
             {
                 text: 'Continue Right',
                 nextText: 'W1M-E'
+            }
+        ]
+    },
+    {
+        id: 'W1M-S',
+        text: 'You find yourself....in a field of flowers, in front of you is a pedastal which seems to contain the EarthStone',
+        options: [
+            {
+                text: 'Grab EarthStone',
+                requiredState: (currentState) => !currentState.earthStone && !currentState.goblinBlessing,
+                nextText: 'W1M-S1'
+            },
+            {
+                text: 'Grab EarthStone',
+                requiredState: (currentState) => currentState.goblinBlessing && !currentState.earthStone,
+                nextText: 'W1M-S2'
+            },
+            {
+                text: 'You have already Taken the stone, Note: "Right Right Left" Continue',
+                requiredState: (currentState) => currentState.earthStone,
+                nextText: 'W1M'
+            }
+        ]
+    },
+    {
+        id: 'W1M-S1',
+        text: 'You go for the Stone only to see it covered in a force field, theres a note "Get the Goblins blessing for the stone"',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W1M'
+            }
+
+        ]
+    },
+    {
+        id: 'W1M-S2',
+        text: 'You reach for the stone, and HUZZAH, your grabbed it: EARTHSTONE ACQUIRED, TWO MORE STONES LEFT!............................hm? There seems to be a note under the stone...."Right Right Left"',
+        options: [
+            {
+                text: 'Continue',
+                setState: {earthStone: true},
+                nextText: 'W1M'
             }
         ]
     },
@@ -346,11 +389,11 @@ export const story = [
     },
     {
         id: 'W1GE',
-        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH* STRAIGHT *MUNCH MUNCH MUNCH* RIGHT *MUNCH MUNCH MUNCH* LEFT *MUNCH MUNCH MUNCH MUNCH*',
+        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH* STRAIGHT *MUNCH MUNCH MUNCH* RIGHT *MUNCH MUNCH MUNCH* LEFT *MUNCH MUNCH MUNCH MUNCH, PLEASE TAKE MY BLESSING*',
         options: [
             {
                 text: 'Continue',
-                setState: {goblinBerry: false},
+                setState: {goblinBerry: false, goblinBlessing: true},
                 nextText: 'W1M'
             }
         ]
@@ -397,6 +440,14 @@ export const story = [
                 nextText: 'V-SL'
             },
             {
+                text: 'Hammer',
+                nextText: 'V-SH'
+            },
+            {
+                text: 'Life Potion',
+                nextText: 'V-SP'
+            },
+            {
                 text: 'Nothing, Thank You',
                 nextText: 'V'
             }
@@ -414,6 +465,38 @@ export const story = [
                 text: 'Trade Star Fruit for Lanturn',
                 requiredState: (currentState) => currentState.starFruit,
                 setState: { starFruit: false, lanturn: true},
+                nextText: 'V-S'
+            }
+        ]
+    },
+    {
+        id: 'V-SH',
+        text: 'ShopKeeper: I will trade you a Hammer for a Ruby Gem',
+        options: [
+            {
+                text: 'Back',
+                nextText: 'V-S'
+            },
+            {
+                text: 'Trade Ruby Gem for Hammer',
+                requiredState: (currentState) => currentState.rubyGem,
+                setState: { rubyGem: false, hammer: true },
+                nextText: 'V-S'
+            }
+        ]
+    },
+    {
+        id: 'V-SP',
+        text: 'ShopKeeper: I will trade you a Life Potion for a Dark Stone',
+        options: [
+            {
+                text: 'Back',
+                nextText: 'V-S'
+            },
+            {
+                text: 'Trade Dark Stone for Hammer',
+                requiredState: (currentState) => currentState.darkStone,
+                setState: { darkStone: false, lifePotion: true },
                 nextText: 'V-S'
             }
         ]
@@ -474,8 +557,13 @@ export const story = [
             },
             {
                 text: 'About the WaterStone',
+                requiredState: (currentState) => !currentState.earthStone || !currentState.fireStone,
+                nextText: 'V-PO3A'
+            },
+            {
+                text: 'About the WaterStone',
                 requiredState: (currentState) => currentState.earthStone && currentState.fireStone,
-                nextText: 'V-PO3'
+                nextText: 'V-PO3B'
             },
             {
                 text: 'Nothing, Thank You',
@@ -496,6 +584,16 @@ export const story = [
     {
         id: 'V-PO2',
         text: 'Wise Old Man: The FireStone is hidden in the caves, although without a light source, it would be futile to go there now.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'V-PO'
+            }
+        ]
+    },
+    {
+        id: 'V-PO3A',
+        text: 'Wise Old Man: Nobody knows anything about the Water Stone right now, come back when you find the other 2 first',
         options: [
             {
                 text: 'Continue',
