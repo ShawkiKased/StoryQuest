@@ -11,10 +11,13 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #F2C545;
+  background-image: url("../images/kingdom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
+  color: #F2C545;
   width: 800px;
   max-width: 80%;
   background-color: #C73B0B;
