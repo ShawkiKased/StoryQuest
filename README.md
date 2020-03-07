@@ -2,7 +2,7 @@
 
 ## Background and Overview
 
-My Project will be a single page game. StoryQuest will be an interractive Text Based Adventure. You will be told a story with your Main Character through various and interractive Message Boxes. These will give you a scenario and options on how to proceed, maybe you'll be a in forest, or a cave etc. 
+My Project will be a single page game. StoryQuest will be an interractive Text Based Adventure. You will be told a story with your Main Character through various and interractive Message Boxes. These will give you a scenario and options on how to proceed, maybe you'll be a in forest, or a cave etc. You can visit it [Here!](https://shawkikased.github.io/StoryQuest/)
 
 ## Functionality and MVP's
 
