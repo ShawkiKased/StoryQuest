@@ -8,17 +8,17 @@ window.addEventListener("DOMContentLoaded", () => {
   let state = {}
 
   function startGame() {
-    // let curState = JSON.parse(localStorage.getItem('cState'))
-    // let next = JSON.parse(localStorage.getItem('next'))
-    // if (curState && next ) {
-    //   state = curState
-    //   showTextNode(next)
-    // } else {
-    //   state = {}
-    //   showTextNode(0)
-    // }
-    state = {}
-    showTextNode(0)
+    let curState = JSON.parse(localStorage.getItem('cState'))
+    let next = JSON.parse(localStorage.getItem('next'))
+    if (curState && next ) {
+      state = curState
+      showTextNode(next)
+    } else {
+      state = {}
+      showTextNode(0)
+    }
+    // state = {}
+    // showTextNode(0)
   }
 
   function showTextNode(textNodeIndex) {
