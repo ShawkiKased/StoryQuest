@@ -7,7 +7,7 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -45,4 +45,34 @@ body {
 
 .btn:hover {
   border-color: #350608;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.linkedin {
+  margin-top: 9px;
+}
+
+.github {
+  margin-top: 9px;
+}
+
+.header {
+  font-size: 50px;
+}
+
+.title {
+  margin-top: 0px;
+  margin-bottom: 134px;
 }

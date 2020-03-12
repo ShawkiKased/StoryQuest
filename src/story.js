@@ -1,6 +1,17 @@
 export const story = [
+
     {
         id: 0,
+        text: '*Instructions* Read through your adventure and use your mouse to click on the choice. Everything has a purpose, a cave needs a lanturn, so if you do not have one, you will not be able to progress, explore and discover ways to solve the puzzles each dungeon brings!',
+        options: [
+            {
+                text: 'Start Game!',
+                nextText: 'I'
+            }
+        ]
+    },
+    {
+        id: 'I',
         text: 'Queen Elizabeth: Welcome Hero, we need your help,the evil King Shawki is ruling the Kingdom with an iron fist! We need someone who is both brave and smart! You will need to traverse the Kingdom in search of the elemental stones that can make you strong enough to face him! Good Luck and be careful on your long journey Hero!',
         options: [
             {
