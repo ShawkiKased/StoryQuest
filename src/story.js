@@ -2,6 +2,7 @@ export const story = [
 
     {
         id: 0,
+        location: kingdom,
         text: '*Instructions* Read through your adventure and use your mouse to click on the choice. Everything has a purpose, a cave needs a lanturn, so if you do not have one, you will not be able to progress, explore and discover ways to solve the puzzles each dungeon brings!',
         options: [
             {
@@ -12,6 +13,7 @@ export const story = [
     },
     {
         id: 'I',
+        location: kingdom,
         text: 'Queen Elizabeth: Welcome Hero, we need your help,the evil King Shawki is ruling the Kingdom with an iron fist! We need someone who is both brave and smart! You will need to traverse the Kingdom in search of the elemental stones that can make you strong enough to face him! Good Luck and be careful on your long journey Hero!',
         options: [
             {
@@ -22,6 +24,7 @@ export const story = [
     },
     {
         id: 1,
+        location: "kingdom",
         text: 'Where would you like to go Hero?',
         options: [
             {
@@ -45,6 +48,7 @@ export const story = [
     },
     {
         id: 'W1',
+        location: forest,
         text: 'You find yourself in a deep forest, you see a sign that warns of a maze.',
         options: [
             {
@@ -59,6 +63,7 @@ export const story = [
     },
     {
         id: 'W1M',
+        location: forest,
         text: 'You reached the entrance of the maze, theres 3 paths and a goblin sitting on the floor',
         options: [
             {
@@ -85,6 +90,7 @@ export const story = [
     },
     {
         id: 'W1M-E',
+        location: forest,
         text: 'You see a bright light shine on you through the path, but alas, you are mysteriously back at the Maze Entrance',
         options: [
             {
@@ -95,6 +101,7 @@ export const story = [
     },
     {
         id: 'W1M-1',
+        location: forest,
         text: 'You started Straight and find 3 more paths',
         options: [
             {
@@ -113,6 +120,7 @@ export const story = [
     },
     {
         id: 'W1M-1-1',
+        location: forest,
         text: 'You went Straight again and find 3 more paths',
         options: [
             {
@@ -131,6 +139,7 @@ export const story = [
     },
     {
         id: 'W1M-1-2',
+        location: forest,
         text: 'You went Left and find 3 more paths',
         options: [
             {
@@ -149,6 +158,7 @@ export const story = [
     },
     {
         id: 'W1M-1-3',
+        location: forest,
         text: 'You went Right and find 3 more paths',
         options: [
             {
@@ -167,6 +177,7 @@ export const story = [
     },
     {
         id: 'W1M-S',
+        location: forest,
         text: 'You find yourself....in a field of flowers, in front of you is a pedastal which seems to contain the EarthStone',
         options: [
             {
@@ -188,6 +199,7 @@ export const story = [
     },
     {
         id: 'W1M-S1',
+        location: forest,
         text: 'You go for the Stone only to see it covered in a force field, theres a note "Get the Goblins blessing for the stone"',
         options: [
             {
@@ -199,6 +211,7 @@ export const story = [
     },
     {
         id: 'W1M-S2',
+        location: forest,
         text: 'You reach for the stone, and HUZZAH, your grabbed it: EARTHSTONE ACQUIRED, TWO MORE STONES LEFT!............................hm? There seems to be a note under the stone...."Right Right Left"',
         options: [
             {
@@ -210,6 +223,7 @@ export const story = [
     },
     {
         id: 'W1M-2',
+        location: forest,
         text: 'You Started Left and find 3 more paths',
         options: [
             {
@@ -229,6 +243,7 @@ export const story = [
     },
     {
         id: 'W1M-2-1',
+        location: forest,
         text: 'You went Straight and find 3 more paths',
         options: [
             {
@@ -247,6 +262,7 @@ export const story = [
     },
     {
         id: 'W1M-2-2',
+        location: forest,
         text: 'You went Left again and find 3 more paths',
         options: [
             {
@@ -265,6 +281,7 @@ export const story = [
     },
     {
         id: 'W1M-GB',
+        location: forest,
         text: 'You find a tree, it seems to be carrying Goblin Berries',
         options: [
             {
@@ -280,6 +297,7 @@ export const story = [
     },
     {
         id: 'W1M-2-3',
+        location: forest,
         text: 'You went Right and find 3 more paths',
         options: [
             {
@@ -298,6 +316,7 @@ export const story = [
     },
     {
         id: 'W1M-3',
+        location: forest,
         text: 'You Started Right and find 3 more paths',
         options: [
             {
@@ -316,6 +335,7 @@ export const story = [
     },
     {
         id: 'W1M-3-1',
+        location: forest,
         text: 'You went Straight and find 3 more paths',
         options: [
             {
@@ -334,6 +354,7 @@ export const story = [
     },
     {
         id: 'W1M-3-2',
+        location: forest,
         text: 'You went Left and find 3 more paths',
         options: [
             {
@@ -352,6 +373,7 @@ export const story = [
     },
     {
         id: 'W1M-3-3',
+        location: forest,
         text: 'You went Right again and find 3 more paths',
         options: [
             {
@@ -370,6 +392,7 @@ export const story = [
     },
     {
         id: 'W1M-SF',
+        location: forest,
         text: 'You find a tree, and it seems to contain Star Fruit',
         options: [
             {
@@ -385,6 +408,7 @@ export const story = [
     },
     {
         id: 'W1G',
+        location: forest,
         text: 'Goblin: I know the way through the maze, but i require something delicious',
         options: [
             {
@@ -400,6 +424,7 @@ export const story = [
     },
     {
         id: 'W1GE',
+        location: forest,
         text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH* STRAIGHT *MUNCH MUNCH MUNCH* RIGHT *MUNCH MUNCH MUNCH* LEFT *MUNCH MUNCH MUNCH MUNCH, PLEASE TAKE MY BLESSING*',
         options: [
             {
@@ -411,6 +436,7 @@ export const story = [
     },
     {
         id: 'W2',
+        location: mine,
         text: 'You went inside the cave, however it is really dark and impossible to see forward',
         options: [
             {
@@ -426,6 +452,7 @@ export const story = [
     },
     {
         id: 'W2-',
+        location: mine,
         text: 'You used your lanturn to light the way, you are now able to see through the cave',
         options: [
             {
@@ -436,6 +463,7 @@ export const story = [
     },
     {
         id: 'W2E',
+        location: mine,
         text: 'Going deeper in the cave, you find yourself in a Mines. There 2 two paths and a minecart in the middle',
         options: [
             {
@@ -458,6 +486,7 @@ export const story = [
     },
     {
         id: 'W2L',
+        location: mine,
         text: 'You come closer to the left Path but a big boulder is blocking the way, your going to need to smash it somehow',
         options: [
             {
@@ -473,6 +502,7 @@ export const story = [
     },
     {
         id: 'W2M',
+        location: mine,
         text: 'You came closer to the Minecart, looks like it could be rideable, but the lever is missing',
         options: [
             {
@@ -489,6 +519,7 @@ export const story = [
     },
     {
         id: 'V',
+        location: village,
         text: 'You went to the village, there are plenty of people to see, what would you like to do?',
         options: [
             {
@@ -507,6 +538,7 @@ export const story = [
     },
     {
         id: 'V-S',
+        location: village,
         text: 'ShopKeeper: Welcome Hero! Take a look at my wares, anything fits your fancy for your Adventure?',
         options: [
             {
@@ -532,6 +564,7 @@ export const story = [
     },
     {
         id: 'V-SL',
+        location: village,
         text: 'ShopKeeper: I will trade you a Lanturn for a Star Fruit',
         options: [
             {
@@ -548,6 +581,7 @@ export const story = [
     },
     {
         id: 'V-SH',
+        location: village,
         text: 'ShopKeeper: I will trade you a Hammer for a Ruby Gem',
         options: [
             {
@@ -564,6 +598,7 @@ export const story = [
     },
     {
         id: 'V-SP',
+        location: village,
         text: 'ShopKeeper: I will trade you a Life Potion for a Dark Stone',
         options: [
             {
@@ -580,6 +615,7 @@ export const story = [
     },
     {
         id: 'V-P',
+        location: village,
         text: 'You go to the center of the village and see the village folk doing their daily routines. Who would you like to talk to?',
         options: [
             {
@@ -602,6 +638,7 @@ export const story = [
     },
     {
         id: 'V-PL',
+        location: village,
         text: 'Lovely Couple: Can you not bother us please? We are enjoying our company in these dark days',
         options: [
             {
@@ -612,6 +649,7 @@ export const story = [
     },
     {
         id: 'V-PK',
+        location: village,
         text: '"Stop running away so fast Cindy, i cant tag you", "Try to keep up Tommy", "Hey Gabriel, i heard the well is haunted", "Well I heard you can find a GoblinBerry Tree if you stay left in the forest Maze"',
         options: [
             {
@@ -622,6 +660,7 @@ export const story = [
     },
     {
         id: 'V-PO',
+        location: village,
         text: 'Wise Old Man: Hello there Hero....is there something you would like to talk about?',
         options: [
             {
@@ -650,6 +689,7 @@ export const story = [
     },
     {
         id: 'V-PO1',
+        location: village,
         text: 'Wise Old Man: The EarthStone is hidden in the woods, but youll need to find your way through a tricky maze.',
         options: [
             {
@@ -660,6 +700,7 @@ export const story = [
     },
     {
         id: 'V-PO2',
+        location: village,
         text: 'Wise Old Man: The FireStone is hidden in the caves, although without a light source, it would be futile to go there now.',
         options: [
             {
@@ -670,6 +711,7 @@ export const story = [
     },
     {
         id: 'V-PO3A',
+        location: village,
         text: 'Wise Old Man: Nobody knows anything about the Water Stone right now, come back when you find the other 2 first',
         options: [
             {

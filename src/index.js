@@ -4,8 +4,14 @@ import { story } from "./story";
 window.addEventListener("DOMContentLoaded", () => {
   const textElement = document.getElementById('text')
   const optionButtonsElement = document.getElementById('option-buttons')
-
   let state = {}
+
+  let backgrounds = {
+    kingdom: ".src/images/kingdom.png",
+    forest: "./src/images/Backgrounds/forest.jpg",
+    mine: "",
+    village: ""
+  }
 
   function startGame() {
     let curState = JSON.parse(localStorage.getItem('cState'))
@@ -52,6 +58,10 @@ window.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem( 'cState', JSON.stringify(state))
     localStorage.setItem('next', JSON.stringify(nextTextNodeId))
     showTextNode(nextTextNodeId)
+  }
+
+  function backgroungChange(state) {
+    // document.body.style.backgroundImage =;
   }
 
   story;
