@@ -6,13 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const optionButtonsElement = document.getElementById('option-buttons')
   let state = {}
 
-  let backgrounds = {
-    kingdom: "./images/kingdom.png",
-    forest: "./images/Backgrounds/forest.jpg",
-    mine: "./images/Backgrounds/mine.jpg",
-    village: "./images/Backgrounds/mine.jpg"
-  }
-
+  
   function startGame() {
     let curState = JSON.parse(localStorage.getItem('cState'))
     let next = JSON.parse(localStorage.getItem('next'))
@@ -26,14 +20,19 @@ window.addEventListener("DOMContentLoaded", () => {
     // state = {}
     // showTextNode(0)
   }
-
+  
   function showTextNode(textNodeIndex) {
+    let backgrounds = {
+      kingdom: "./src/images/kingdom.png",
+      forest: "./src/images/Backgrounds/forest.jpg",
+      mine: "./src/images/Backgrounds/mine.jpg",
+      village: "./src/images/Backgrounds/mine.jpg"
+    }
     const textNode = story.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
       optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
-
     textNode.options.forEach(option => {
       if (showOption(option)) {
         const button = document.createElement('button')
@@ -43,6 +42,8 @@ window.addEventListener("DOMContentLoaded", () => {
         optionButtonsElement.appendChild(button)
       }
     })
+    let a = textNode.location;
+    document.body.style.backgroundImage = `url(${backgrounds[a]})`;
   }
 
   function showOption(option) {
@@ -60,9 +61,9 @@ window.addEventListener("DOMContentLoaded", () => {
     showTextNode(nextTextNodeId)
   }
 
-  function backgroungChange(state) {
-    // document.body.style.backgroundImage =;
-  }
+  // function backgroungChange(backgrounds) {
+  //   document.body.style.backgroundImage = backgrounds;
+  // }
 
   story;
 
