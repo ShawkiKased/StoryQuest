@@ -7,10 +7,10 @@ window.addEventListener("DOMContentLoaded", () => {
   let state = {}
 
   let backgrounds = {
-    kingdom: ".src/images/kingdom.png",
-    forest: "./src/images/Backgrounds/forest.jpg",
-    mine: "",
-    village: ""
+    kingdom: "./images/kingdom.png",
+    forest: "./images/Backgrounds/forest.jpg",
+    mine: "./images/Backgrounds/mine.jpg",
+    village: "./images/Backgrounds/mine.jpg"
   }
 
   function startGame() {
