@@ -18,8 +18,8 @@ In Adition, this project can possibly include:
 
 ## WireFrame && FileStructure
 
-![WireFrame](https://i.imgur.com/YGCZElE.png)
-![FileStructure](https://i.imgur.com/Js6uwzP.png)
+![WireFrame](https://i.imgur.com/YGCZElE.png) *source: Self-made
+![FileStructure](https://i.imgur.com/Js6uwzP.png) *source: edited from File Structure example from App Academy
 
 ## Architecture and Technology
 
