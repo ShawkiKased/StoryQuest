@@ -510,7 +510,7 @@ export const story = [
                 nextText: 'W2E'
             },
             {
-                text: 'Use Hammer',
+                text: 'Place Lever',
                 requiredState: (currentState) => currentState.lever,
                 nextText: 'W2M2'
             }
@@ -606,7 +606,7 @@ export const story = [
                 nextText: 'V-S'
             },
             {
-                text: 'Trade Dark Stone for Hammer',
+                text: 'Trade Dark Stone for Life Potion',
                 requiredState: (currentState) => currentState.darkStone,
                 setState: { darkStone: false, lifePotion: true },
                 nextText: 'V-S'
