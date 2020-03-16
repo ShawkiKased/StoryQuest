@@ -518,6 +518,50 @@ export const story = [
 
     },
     {
+        id: 'W2R',
+        location: 'mine',
+        text: 'You find a big hole in the ground, it seems dangerous, but as you come close, you hear a faint voice......"Feed Me"',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W2E'
+            },
+            {
+                text: 'Throw Goblin Berries in the hole',
+                requiredState: (currentState) => currentState.goblinBerry,
+                nextText: 'W2RG1'
+            },
+            {
+                text: 'Throw Star Fruit in the hole',
+                requiredState: (currentState) => currentState.starFruit,
+                nextText: 'W2R2'
+            }
+        ]
+    },
+    {
+        id: 'W2RG1',
+        location: 'mine',
+        text: 'You threw the Goblin Berries in the hole.....................',
+        options: [
+            {
+                text: 'Continue',
+                setState: { goblinBerry: false },
+                nextText: 'W2RG2'
+            }
+        ]
+    },
+    {
+        id: 'W2RG2',
+        location: 'mine',
+        text: 'The ground furiously shakes, and you hear a booming voice "I DONT LIKE GOBLIN BERRIES", the cave collapses on top of you and knocks you out. You then wake up back at the main map.....',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 1
+            }
+        ]
+    },
+    {
         id: 'V',
         location: 'village',
         text: 'You went to the village, there are plenty of people to see, what would you like to do?',
