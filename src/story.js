@@ -436,7 +436,7 @@ export const story = [
     },
     {
         id: 'W2',
-        location: 'mine',
+        location: 'dark',
         text: 'You went inside the cave, however it is really dark and impossible to see forward',
         options: [
             {
@@ -533,8 +533,8 @@ export const story = [
             },
             {
                 text: 'Throw Star Fruit in the hole',
-                requiredState: (currentState) => currentState.starFruit,
-                nextText: 'W2R2'
+                requiredState: (currentState) => currentState.starFruit && (!currentState.rubyGem && !currentState.hammer),
+                nextText: 'W2RS1'
             }
         ]
     },
@@ -558,6 +558,30 @@ export const story = [
             {
                 text: 'Continue',
                 nextText: 1
+            }
+        ]
+    },
+    {
+        id: 'W2RS1',
+        location: 'mine',
+        text: 'You threw the Star Fruit in the hole........................',
+        options: [
+            {
+                text: 'Continue',
+                setState: { starFruit: false },
+                nextText: 'W2RS2'
+            }
+        ]
+    },
+    {
+        id: 'W2RS2',
+        location: 'mine',
+        text: 'You hear the voice again, "THANK YOU, IM STARVING, TAKE THIS", the Ruby Gem is thrown out of hole!',
+        options: [
+            { 
+                text: 'Take Ruby Gem',
+                setState: { rubyGem: true },
+                nextText: 'W2E'
             }
         ]
     },
