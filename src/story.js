@@ -478,7 +478,13 @@ export const story = [
             },
             {
                 text: 'Get closer to the Minecart',
+                requiredState: (currentState) => !currentState.minecart,
                 nextText: 'W2M'
+            },
+            {
+                text: 'Get Closer to the Minecart',
+                requiredState: (currentState) => currentState.minecart,
+                nextText: 'W2MS'
             },
             {
                 text: 'Go to the Right',
@@ -546,6 +552,33 @@ export const story = [
             }
         ]
 
+    },
+    {
+        id: 'W2M2',
+        location: 'mine',
+        text: 'You placed the Lever in the Minecart, you can now ride on it',
+        options: [
+            {
+                text: 'Continue',
+                setState: { minecart: true},
+                nextText: 'W2MS'
+            }
+        ]
+    },
+    {
+        id: 'W2MS',
+        location: 'mine',
+        text: 'Would you like to ride the Minecart?',
+        options: [
+            {
+                text: 'Ride the Minecart',
+                nextText: 'W2MS-'
+            },
+            {
+                text: 'No',
+                nextText: 'W2E'
+            }
+        ]
     },
     {
         id: 'W2R',
