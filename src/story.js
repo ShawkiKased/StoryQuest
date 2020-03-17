@@ -468,7 +468,13 @@ export const story = [
         options: [
             {
                 text: 'Go to the Left',
-                nextText: 'W2L'
+                requiredState: (currentState) => !currentState.lever,
+                nextText: 'W2L1'
+            },
+            {
+                text: 'Go to the Left',
+                requiredState: (currentState) => currentState.lever,
+                nextText: 'W2L2'
             },
             {
                 text: 'Get closer to the Minecart',
@@ -485,7 +491,7 @@ export const story = [
         ]
     },
     {
-        id: 'W2L',
+        id: 'W2L1',
         location: 'mine',
         text: 'You come closer to the left Path but a big boulder is blocking the way, your going to need to smash it somehow',
         options: [
@@ -499,6 +505,30 @@ export const story = [
                 nextText: 'W2L2'
             }
         ]
+    },
+    {
+        id: 'W2L2',
+        location: 'mine',
+        text: 'You smashed the boulder and took the lever already',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W2E'
+            },
+        ]
+    },
+    {
+        id: 'W2L2',
+        location: 'mine',
+        text: 'You use your Hammer to smash the boulder into pieces. Behind it lays a minecart lever',
+        options: [
+            {
+                text: 'Take Minecart Lever',
+                setState: { lever: true },
+                nextText: 'W2E'
+            }
+        ]
+
     },
     {
         id: 'W2M',
