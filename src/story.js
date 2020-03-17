@@ -474,7 +474,7 @@ export const story = [
             {
                 text: 'Go to the Left',
                 requiredState: (currentState) => currentState.lever,
-                nextText: 'W2L2'
+                nextText: 'W2L3'
             },
             {
                 text: 'Get closer to the Minecart',
@@ -507,7 +507,7 @@ export const story = [
         ]
     },
     {
-        id: 'W2L2',
+        id: 'W2L3',
         location: 'mine',
         text: 'You smashed the boulder and took the lever already',
         options: [
