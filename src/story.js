@@ -212,7 +212,7 @@ export const story = [
     {
         id: 'W1M-S2',
         location: 'forest',
-        text: 'You reach for the stone, and HUZZAH, your grabbed it: EARTHSTONE ACQUIRED, TWO MORE STONES LEFT!............................hm? There seems to be a note under the stone...."Right Right Left"',
+        text: 'You reach for the stone, and HUZZAH, your grabbed it: EARTHSTONE ACQUIRED!............................hm? There seems to be a note under the stone...."Right Right Left"',
         options: [
             {
                 text: 'Continue',
@@ -464,7 +464,7 @@ export const story = [
     {
         id: 'W2E',
         location: 'mine',
-        text: 'Going deeper in the cave, you find yourself in a Mines. There 2 two paths and a minecart in the middle',
+        text: 'Going deeper in the cave, you find yourself in the Mines. There are 2 two paths and a minecart in the middle',
         options: [
             {
                 text: 'Go to the Left',
@@ -576,6 +576,131 @@ export const story = [
             },
             {
                 text: 'No',
+                nextText: 'W2E'
+            }
+        ]
+    },
+    {
+        id: 'W2MS-',
+        location: 'mine',
+        text: 'You got on the Minecart and rode forward, its time to be careful, proceed with caution...',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W2MS1'
+            }
+        ]
+    },
+    {
+        id: 'W2MSF',
+        location: 'mine',
+        text: 'You crashed and got knocked out......Try Again',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        id: 'W2MS1',
+        location: 'mine',
+        text: 'You come across a multi-track system, In front of you is an incoming minecart with a troll in it, hes about to crash into you.',
+        options: [
+            {
+                text: 'Change the track',
+                nextText: 'W2MS2'
+            },
+            {
+                text: 'Dont do anything',
+                nextText: 'W2MSF'
+            }
+        ]
+    },
+    {
+        id: 'W2MS2',
+        location: 'mine',
+        text: 'You avoided the troll. In front of you is a bigger troll outside the track about to hit you with a giant club.....',
+        options: [
+            {
+                text: 'Change the track',
+                nextText: 'W2MSF'
+            },
+            {
+                text: 'Try to duck',
+                nextText: 'W2MS3'
+            },
+            {
+                text: 'Use Your Hammer',
+                nextText: 'W2MSF'
+            }
+        ]
+    },
+    {
+        id: 'W2MS3',
+        location: 'mine',
+        text: 'You ducked and avoided the swing. In front of you are two more trolls on opposite tracks headings towards you.....',
+        options: [
+            {
+                text: 'Change the track',
+                nextText: 'W2MSF'
+            },
+            {
+                text: 'Use Your Hammer',
+                nextText: 'W2MSF'
+            },
+            {
+                text: 'Dont do anything',
+                nextText: 'W2MS4'
+            },
+            {
+                text: 'Try to duck',
+                nextText: 'W2MSF'
+            }
+        ]
+    },
+    {
+        id: 'W2MS4',
+        location: 'mine',
+        text: 'You didnt do anything and the trolls end up crashing into each other. Behind you is a minecart with a bomb coming close to you and following behind....',
+        options: [
+            {
+                text: 'Change the track',
+                nextText: 'W2MSF'
+            },
+            {
+                text: 'Use Your Hammer',
+                nextText: 'W2MS5'
+            },
+            {
+                text: 'Dont do anything',
+                nextText: 'W2MSF'
+            },
+            {
+                text: 'Speed up and try to lose it',
+                nextText: 'W2MSF'
+            }
+        ]
+    },
+    {
+        id: 'W2MS5',
+        location: 'mine',
+        text: 'You used your Hammer to knock the bomb out of the incoming cart. Your minecart has reached its destination, the stress is over.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W2MSEnd'
+            }
+        ]
+    },
+    {
+        id: 'W2MSEnd',
+        location: 'mine',
+        text: 'You reached a pedastal......It has the FireStone in it, HUZZAH!',
+        options: [
+            {
+                text: 'Ride Minecart Back',
+                setState: { fireStone: true },
                 nextText: 'W2E'
             }
         ]
