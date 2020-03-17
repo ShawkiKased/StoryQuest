@@ -12,8 +12,10 @@
 </head>
 <body>
 
- <audio controls autoplay loop style="display:none">
-    <source src="./src/music/forest.mp3" />
+ <iframe src="./src/music/silence.mp3" autoplay id="audio" style="display: none"></iframe>
+
+ <audio id="player" autoplay loop>
+   <source src="./src/music/forest.mp3" type="audio/mp3">
  </audio>
 
   <div class="header">
