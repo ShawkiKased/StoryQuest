@@ -689,7 +689,13 @@ export const story = [
         options: [
             {
                 text: 'Continue',
+                requiredState: (currentState) => !currentState.fireStone,
                 nextText: 'W2MSEnd'
+            },
+            {
+                text: 'Continue',
+                requiredState: (currentState) => currentState.fireStone,
+                nextText: 'W2MSEnd2'
             }
         ]
     },
@@ -701,6 +707,17 @@ export const story = [
             {
                 text: 'Ride Minecart Back',
                 setState: { fireStone: true },
+                nextText: 'W2E'
+            }
+        ]
+    },
+    {
+        id: 'W2MSEnd2',
+        location: 'mine',
+        text: 'You have already taken the FireStone, the only thing here is the pedastal and a wall',
+        options: [
+            {
+                text: 'Ride Minecart Back',
                 nextText: 'W2E'
             }
         ]
