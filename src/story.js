@@ -645,6 +645,14 @@ export const story = [
                 nextText: 'W2MS2'
             },
             {
+                text: 'Try to duck',
+                nextText: 'W2MSF'
+            },
+            {
+                text: 'Use your Hammer',
+                nextText: 'W2MSF'
+            },
+            {
                 text: 'Dont do anything',
                 nextText: 'W2MSF'
             }
@@ -664,7 +672,11 @@ export const story = [
                 nextText: 'W2MS3'
             },
             {
-                text: 'Use Your Hammer',
+                text: 'Use your Hammer',
+                nextText: 'W2MSF'
+            },
+            {
+                text: 'Dont do anything',
                 nextText: 'W2MSF'
             }
         ]
@@ -672,23 +684,23 @@ export const story = [
     {
         id: 'W2MS3',
         location: 'mine',
-        text: 'You ducked and avoided the swing. In front of you are two more trolls on opposite tracks headings towards you.....',
+        text: 'You ducked and avoided the swing. In front of you are two more trolls on opposite tracks heading towards you.....',
         options: [
             {
                 text: 'Change the track',
                 nextText: 'W2MSF'
             },
             {
-                text: 'Use Your Hammer',
+                text: 'Try to duck',
+                nextText: 'W2MSF'
+            },
+            {
+                text: 'Use your Hammer',
                 nextText: 'W2MSF'
             },
             {
                 text: 'Dont do anything',
                 nextText: 'W2MS4'
-            },
-            {
-                text: 'Try to duck',
-                nextText: 'W2MSF'
             }
         ]
     },
@@ -702,12 +714,12 @@ export const story = [
                 nextText: 'W2MSF'
             },
             {
-                text: 'Use Your Hammer',
-                nextText: 'W2MS5'
+                text: 'Try to duck',
+                nextText: 'W2MSF'
             },
             {
-                text: 'Dont do anything',
-                nextText: 'W2MSF'
+                text: 'Use your Hammer',
+                nextText: 'W2MS5'
             },
             {
                 text: 'Speed up and try to lose it',
@@ -755,12 +767,12 @@ export const story = [
             },
             {
                 text: 'Observe Wall',
-                requiredState: (currentState) => currentState.goblinAdvice,
+                requiredState: (currentState) => currentState.goblinAdvice && !currentState.wall,
                 nextText: 'W2W'
             },
             {
                 text: 'Observe Broken Wall',
-                requiredSTate: (currentState) => currentState.wall,
+                requiredState: (currentState) => currentState.wall,
                 nextText: 'W2W3'
             }
         ]
@@ -892,7 +904,7 @@ export const story = [
     {
         id: 'W2RGG2',
         location: 'mine',
-        text: 'You hear the voice again, "OH MY GOD, OOOOOOOH MYYYYY GOOOOOOD, GOLDEN GOBLINE BERRIES? AWWWWW YEEEEEEEEEEESSS THANK YOU, TAKE THIS", the Mirror Of Truth was thrown out of the hole',
+        text: 'You hear the voice again, "OH MY GOD, OOOOOOOH MYYYYY GOOOOOOD, GOLDEN GOBLIN BERRIES? AWWWWW YEEEEEEEEEEESSS THANK YOU, TAKE THIS", the Mirror Of Truth was thrown out of the hole',
         options: [
             {
                 text: 'Take Mirror Of Truth',
