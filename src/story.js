@@ -904,7 +904,7 @@ export const story = [
     {
         id: 'W2RGG2',
         location: 'mine',
-        text: 'You hear the voice again, "OH MY GOD, OOOOOOOH MYYYYY GOOOOOOD, GOLDEN GOBLIN BERRIES? AWWWWW YEEEEEEEEEEESSS THANK YOU, TAKE THIS", the Mirror Of Truth was thrown out of the hole',
+        text: 'You hear the voice again, "OH MY GOD, OOOOOOOH MYYYYY GOOOOOOD, GOLDEN GOBLIN BERRIES? AWWWWW YEEEEEEEEEEESSS THANK YOU, TAKE THIS, AND BE CAREFUL OF THE MONSTERS NEAR THE WELL", the Mirror Of Truth was thrown out of the hole',
         options: [
             {
                 text: 'Take Mirror Of Truth',
@@ -1040,6 +1040,11 @@ export const story = [
             {
                 text: 'Go Back',
                 nextText: 'V-P'
+            },
+            {
+                text: 'Use the Mirror Of Truth',
+                requiredState: (currentState) => currentState.mirror,
+                nextText: 'VPLW'
             }
         ]
     },
