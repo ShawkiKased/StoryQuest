@@ -450,7 +450,20 @@ export const story = [
             },
             {
                 text: 'Give Both Goblin Berries and Star Fruit',
-                requiredState: (currentState) => currentState.starFruit && currentState.goblinBerry
+                requiredState: (currentState) => currentState.starFruit && currentState.goblinBerry,
+                nextText: 'W1G3'
+            }
+        ]
+    },
+    {
+        id: 'W1G3',
+        location: 'forest',
+        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* SO DELICIOUS *MUNCH MUNCH MUNCH MUNCH MUNCH* SO JUICY *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* Okay Okay Okay okay, listen carefully, have you been to the mines? Theres a giant hole with some creature in it. Your going to have to give him Golden Goblin Berries, he really hates normal ones. I heard you can find them deep in the caves, near the FireStone. Try looking for something suspicious',
+        options: [
+            {
+                text: 'Return to Maze',
+                setState: { goblinBerry: false, starFruit: false, goblinAdvice: true },
+                nextText: 'W1M'
             }
         ]
     },
@@ -739,6 +752,55 @@ export const story = [
             {
                 text: 'Ride Minecart Back',
                 nextText: 'W2E'
+            },
+            {
+                text: 'Observe Wall',
+                requiredState: (currentState) => currentState.goblinAdvice,
+                nextText: 'W2W'
+            },
+            {
+                text: 'Observe Broken Wall',
+                requiredSTate: (currentState) => currentState.wall,
+                nextText: 'W2W3'
+            }
+        ]
+    },
+    {
+        id: 'W2W',
+        location: 'mine',
+        text: 'You observed the wall, there seems to be a crack',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W2MSEnd2'
+            },
+            {
+                text: 'Use your Hammer on the crack',
+                nextText: 'W2W2'
+            }
+        ]
+    },
+    {
+        id: 'W2W2',
+        location: 'mine',
+        text: 'You used your Hammer on the crack, you busted a hole and see that theres a room behind it. You smashed it again and busted a new room',
+        options: [
+            {
+                text: 'Continue',
+                setState: { wall: true },
+                nextText: 'W2W3'
+            }
+        ]
+    },
+    {
+        id: 'W2W3',
+        location: 'mine',
+        text: 'You come up to a new room with a golden tree, it contains Gold Goblin Berries',
+        options: [
+            {
+                text: 'Grab Golden Berries and Go Back',
+                setState: { goldenBerry: true },
+                nextText: 'W2MSEnd2'
             }
         ]
     },
@@ -760,6 +822,11 @@ export const story = [
                 text: 'Throw Star Fruit in the hole',
                 requiredState: (currentState) => currentState.starFruit && (!currentState.rubyGem && !currentState.hammer),
                 nextText: 'W2RS1'
+            },
+            {
+                text: 'Throw Golden Goblin Berries in the hole',
+                requiredState: (currentState) => currentState.goldenBerry,
+                nextText: 'W2RGG'
             }
         ]
     },
@@ -806,6 +873,30 @@ export const story = [
             { 
                 text: 'Take Ruby Gem',
                 setState: { rubyGem: true },
+                nextText: 'W2E'
+            }
+        ]
+    },
+    {
+        id: 'W2RGG',
+        location: 'mine',
+        text: 'You threw the Golden Goblin Berries in the hole...............',
+        options: [
+            {
+                text: 'Continue',
+                setState: { goldenBerry: false },
+                nextText: 'W2RGG2'
+            }
+        ]
+    },
+    {
+        id: 'W2RGG2',
+        location: 'mine',
+        text: 'You hear the voice again, "OH MY GOD, OOOOOOOH MYYYYY GOOOOOOD, GOLDEN GOBLINE BERRIES? AWWWWW YEEEEEEEEEEESSS THANK YOU, TAKE THIS", the Mirror Of Truth was thrown out of the hole',
+        options: [
+            {
+                text: 'Take Mirror Of Truth',
+                setState: { mirror: true },
                 nextText: 'W2E'
             }
         ]
