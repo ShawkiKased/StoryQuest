@@ -419,6 +419,11 @@ export const story = [
                 text: 'Give Goblin GoblinBerries',
                 requiredState: (currentState) => currentState.goblinBerry,
                 nextText: 'W1GE'
+            },
+            {
+                text: 'Ask about Mirror Of Truth',
+                requiredState: (currentState) => currentState.advice,
+                nextText: 'W1G2'
             }
         ]
     },
@@ -435,12 +440,27 @@ export const story = [
         ]
     },
     {
+        id: 'W1G2',
+        location: 'forest',
+        text: 'Goblin: Oh, for THAT im gonna need TWO Delicious things at the same time, hehehe',
+        options: [
+            {
+                text: 'Return to Maze',
+                nextText: 'W1M'
+            },
+            {
+                text: 'Give Both Goblin Berries and Star Fruit',
+                requiredState: (currentState) => currentState.starFruit && currentState.goblinBerry
+            }
+        ]
+    },
+    {
         id: 'W2',
         location: 'dark',
         text: 'You went inside the cave, however it is really dark and impossible to see forward',
         options: [
             {
-                text: 'Go Back to Map',
+                text: 'Return to Map',
                 nextText: 1
             },
             {
@@ -491,8 +511,8 @@ export const story = [
                 nextText: 'W2R'
             },
             {
-                text: 'Go Back',
-                nextText: 'W2'
+                text: 'Get out of the cave',
+                nextText: 1
             }
         ]
     },
@@ -989,6 +1009,18 @@ export const story = [
         options: [
             {
                 text: 'Continue',
+                nextText: 'V-PO'
+            }
+        ]
+    },
+    {
+        id: 'V-PO3B',
+        location: 'village',
+        text: 'Wise Old Man: Ah I see your back with both the FireStone and EarthStone. Ive done some reading and found out that the WaterStone is deep in an underground dungeon that is only accessible to those that have the Mirror Of Truth. Where to find such a thing is a mystery unfortunately, however i have read that a Forest Goblin should know. If you can find one, ask him about it.',
+        options: [
+            {
+                text: 'Continue',
+                setState: { advice: true},
                 nextText: 'V-PO'
             }
         ]
