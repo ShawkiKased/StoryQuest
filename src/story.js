@@ -1134,6 +1134,29 @@ export const story = [
         ]
     },
     {
+        id: 'W3',
+        location: 'well',
+        text: 'You go downstairs and find yourself in a secret underground room, theres 2 doors and a fireplace with boiling pot',
+        options: [
+            {
+                text: 'Check Left Door',
+                nextText: 'W3L'
+            },
+            {
+                text: 'Check Fire Place',
+                nextText: 'W3F'
+            },
+            {
+                text: 'Check the Right Door',
+                nextText: 'W3R'
+            },
+            {
+                text: 'Go Back Outside',
+                nextText: 'V-PW'
+            }
+        ]
+    },
+    {
         id: 'V-PK',
         location: 'village',
         text: '"Stop running away so fast Cindy, i cant tag you", "Try to keep up Tommy", "Hey Gabriel, i heard the well is haunted", "Well I heard you can find a GoblinBerry Tree if you stay left in the forest Maze"',
