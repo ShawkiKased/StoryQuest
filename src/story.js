@@ -1019,6 +1019,10 @@ export const story = [
                 nextText: 'V-PL'
             },
             {
+                text: 'To the Well',
+                nextText: 'V-PW'
+            },
+            {
                 text: 'Children that are playing',
                 nextText: 'V-PK'
             },
@@ -1081,11 +1085,49 @@ export const story = [
             },
             {
                 text: 'Use Lantern',
-                nextText: 'VPLWF'
+                nextText: 'VPLW3'
             },
             {
                 text: 'Dodge Attack',
-                nextText: 'VPLW3'
+                nextText: 'VPLWF'
+            }
+        ]
+    },
+    {
+        id: 'VPLW3',
+        location: 'village',
+        text: 'You used the Lanturn to blind the monsters, nows your chance!',
+        options: [
+            {
+                text: 'Use Hammer',
+                nextText: 'VPLWF4',
+            }
+        ]
+    },
+    {
+        id: 'VPLWF4',
+        location: 'village',
+        text: 'You knocked the monsters out with your Hammer, they are defeated! The well has now changed, a set of stairs have appeared going underground.....',
+        options: [
+            {
+                text: 'Continue',
+                setState: { well: true },
+                nextText: 'V-PW'
+            }
+        ]
+    },
+    {
+        id: 'V-PW',
+        location: 'village',
+        text: 'You go near the well, that now has a set of stairs leading underground.',
+        options: [
+            { 
+                text: 'Go down the Well',
+                nextText: 'W3',
+            },
+            {
+                text: 'Go Back',
+                nextText: 'V-P'
             }
         ]
     },
