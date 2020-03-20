@@ -1049,6 +1049,47 @@ export const story = [
         ]
     },
     {
+        id: 'VPLW',
+        location: 'village',
+        text: 'You used your Mirror Of Truth, the "Lovely Couple" have suddenly turned into monsters',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'VPLW2'
+            }
+        ]
+    },
+    {
+        id: 'VPLWF',
+        location: 'village',
+        text: 'Bad Choice, the monsters managed to attack you and knock you out...........Try Again',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        id: 'VPLW2',
+        location: 'village',
+        text: 'Monsters: "What the!? He figured us out, lets get em!" The monsters charge towards you.....',
+        options: [
+            {
+                text: 'Use Hammer',
+                nextText: 'VPLWF'
+            },
+            {
+                text: 'Use Lantern',
+                nextText: 'VPLWF'
+            },
+            {
+                text: 'Dodge Attack',
+                nextText: 'VPLW3'
+            }
+        ]
+    },
+    {
         id: 'V-PK',
         location: 'village',
         text: '"Stop running away so fast Cindy, i cant tag you", "Try to keep up Tommy", "Hey Gabriel, i heard the well is haunted", "Well I heard you can find a GoblinBerry Tree if you stay left in the forest Maze"',

@@ -12,9 +12,9 @@ In StoryQuest, the User will be able to:
 * A Background visual of your location to give you a sense of where you are.
 * Save states so when the user refreshes, they will be to continue where they left off.
 
-In Adition, this project can possibly include:
+Bonus Features that can eventually happen:
 * Include images of the characters your talking/Interracting with.
-* Turn based battles
+* Change music based on location
 
 ## WireFrame && FileStructure
 
