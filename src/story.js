@@ -1016,10 +1016,12 @@ export const story = [
         options: [
             {
                 text: 'Lovely Couple by the well',
+                requiredState: (currentState) => !currentState.well,
                 nextText: 'V-PL'
             },
             {
                 text: 'To the Well',
+                requiredState: (currentState) => currentState.well,
                 nextText: 'V-PW'
             },
             {
