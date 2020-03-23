@@ -1148,11 +1148,189 @@ export const story = [
             },
             {
                 text: 'Check the Right Door',
+                requiredState: (currentState) => !currentState.book,
                 nextText: 'W3R'
+            },
+            {
+                text: 'Check the Right Door',
+                requiredState: (currentState) => currentState.book,
+                nextText: 'W3RB'
             },
             {
                 text: 'Go Back Outside',
                 nextText: 'V-PW'
+            }
+        ]
+    },
+    {
+        id: 'W3L',
+        location: 'well',
+        text: 'You walked to the door on the left, it is a metal door with no opening...',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W3'
+            },
+            {
+                text: '"Knock on the Steel"',
+                requiredState: (currentState) => currentState.bookAdvice && !currentState.SD,
+                nextText: 'W3LK'
+            }
+        ]
+    },
+    {
+        id: 'W3LK',
+        location: 'well',
+        text: 'You came closer to the Door and decided to do what the old man suggestion....what should you do first?',
+        options: [
+            {
+                text: 'Knock 2 Heavy',
+                nextText: 'W3LK2'
+            },
+            {
+                text: 'Knock 2 Light',
+                nextText: 'W3LK2'
+            },
+            {
+                text: 'Knock 1 Heavy',
+                nextText: 'W3LK2'
+            },
+            {
+                text: 'Knock 3 Light',
+                setState: {S1: true},
+                nextText: 'W3LK2'
+            }
+        ]
+    },
+    {
+        id: 'W3LK2',
+        location: 'well',
+        text: 'What should you do second?',
+        options: [
+            {
+                text: 'Knock 1 Heavy',
+                setState: {S1: false},
+                nextText: 'W3LK3'
+            },
+            {
+                text: 'Knock 1 Light',
+                setState: { S1: false },
+                nextText: 'W3LK3'
+            },
+            {
+                text: 'Knock 3 Heavy',
+                setState: {S2: true},
+                nextText: 'W3LK3'
+            },
+            {
+                text: 'Knock 2 Light',
+                setState: { S1: false },
+                nextText: 'W3LK3'
+            }
+        ]
+    },
+    {
+        id: 'W3LK3',
+        location: 'well',
+        text: 'Finally, what should you do?',
+        options: [
+            {
+                text: 'Knock 1 Heavy',
+                setState: {S1: false, S2: false},
+                nextText: 'W3LKF'
+            },
+            {
+                text: 'Knock 2 Light',
+                requiredState: (currentState) => currentState.S1 && currentState.S2,
+                nextText: 'W3LKP'
+            },
+            {
+                text: 'Knock 2 Light',
+                requiredState: (currentState) => !currentState.S1 || !currentState.S2,
+                nextText: 'W3LKF'
+            },
+            {
+                text: 'Knock 3 Heavy',
+                setState: { S1: false, S2: false },
+                nextText: 'W3LKF'
+            },
+            {
+                text: 'Knock 4 Light',
+                setState: { S1: false, S2: false },
+                nextText: 'W3LKF'
+            }
+        ]
+    },
+    {
+        id: 'W3LKF',
+        location: 'well',
+        text: '.............Unfortunately Nothing Happened.......',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W3L'
+            }
+        ]
+    },
+    {
+        id: 'W3LKP',
+        location: 'well',
+        text: '.....................You hear a rumbling of something moving......It seems to have come from the right side',
+        options: [
+            {
+                text: 'Continue',
+                setState: { SD: true },
+                nextText: 'W3L'
+            }
+        ]
+    },
+    {
+        id: 'W3F',
+        location: 'well',
+        text: 'You came closer to the well, there seems to be something boiling in the pot, but the flames are too hot to grab it...',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3R',
+        location: 'well',
+        text: 'You walked to the door on the right, behind it is a book shelf with a single book on it....',
+        options: [
+            {
+                text: 'Grab the book',
+                requiredState: (currentState) => !currentState.book,
+                nextText: 'W3B'
+            },
+            {
+                text: 'Go back',
+                nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3B',
+        location: 'well',
+        text: 'You grabbed the book, its in a langauge you dont understand, maybe theres someone who can read it to you...',
+        options: [
+            {
+                text: 'Continue',
+                setState: {book: true},
+                nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3RB',
+        location: 'well',
+        text: 'You walked to the door on the right, you have taken the book from the book shelf',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W3'
             }
         ]
     },
@@ -1189,6 +1367,11 @@ export const story = [
                 text: 'About the WaterStone',
                 requiredState: (currentState) => currentState.earthStone && currentState.fireStone,
                 nextText: 'V-PO3B'
+            },
+            {
+                text: 'Do you know anything about this Book?',
+                requiredState: (currentState) => currentState.book,
+                nextText: 'V-PO4'
             },
             {
                 text: 'Nothing, Thank You',
@@ -1237,6 +1420,18 @@ export const story = [
             {
                 text: 'Continue',
                 setState: { advice: true},
+                nextText: 'V-PO'
+            }
+        ]
+    },
+    {
+        id: 'V-PO4',
+        location: 'village',
+        text: 'Wise Old Man: I do, let me take a look, hmmm................Ah! It says "Knock on the Steel, 3 light, 3 heavy, 2 light no order more"',
+        options: [
+            {
+                text: 'Continue',
+                setState: { bookAdvice: true },
                 nextText: 'V-PO'
             }
         ]
