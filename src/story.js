@@ -1144,21 +1144,43 @@ export const story = [
             },
             {
                 text: 'Check Fire Place',
+                requiredState: (currentState) => !currentState.pot,
                 nextText: 'W3F'
             },
             {
+                text: 'Check Fire Place',
+                requiredState: (currentState) => currentState.pot,
+                nextText: 'W3FB'
+            },
+            {
                 text: 'Check the Right Door',
-                requiredState: (currentState) => !currentState.book,
+                requiredState: (currentState) => !currentState.book && !currentState.SD,
                 nextText: 'W3R'
             },
             {
                 text: 'Check the Right Door',
-                requiredState: (currentState) => currentState.book,
+                requiredState: (currentState) => currentState.book && !currentState.SD,
                 nextText: 'W3RB'
             },
             {
+                text: 'Check the Right Door',
+                requiredState: (currentState) => currentState.book && currentState.SD && !currentState.glass,
+                nextText: 'W3RC'
+            },
+            {
+                text: 'Check the Right Door',
+                requiredState: (currentState) => currentState.book && currentState.SD && currentState.glass,
+                nextText: 'W3RD'
+            },
+            {
                 text: 'Go Back Outside',
+                requiredState: (currentState) => !currentState.glass,
                 nextText: 'V-PW'
+            },
+            {
+                text: 'Go Back Outside',
+                requiredState: (currentState) => currentState.glass,
+                nextText: 'WT'
             }
         ]
     },
@@ -1287,7 +1309,46 @@ export const story = [
     {
         id: 'W3F',
         location: 'well',
-        text: 'You came closer to the well, there seems to be something boiling in the pot, but the flames are too hot to grab it...',
+        text: 'You came closer to the FirePlace, there seems to be something boiling in the pot, but the flames are too hot to grab it...',
+        options: [
+            {
+                text: 'Throw Glass of Liquid in the Flames',
+                requiredState: (currentState) => currentState.glass,
+                nextText: 'W3F2'
+            },
+            {
+                text: 'Go Back',
+                nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3F2',
+        location: 'well',
+        text: 'You threw whatever was in that glass of liquid in the flames.............The flames have died down and the boiling pot has stopped.',
+        options: [
+            {
+                text: 'Look at the pot',
+                nextText: 'W3F3'
+            }
+        ]
+    },
+    {
+        id: 'W3F3',
+        location: 'well',
+        text: 'You looked inside the pot, there seems to be a switch underneath it, you pressed it.............................You hear a rumbling sound coming from the left side....',
+        options: [
+            {
+                text: 'Continue',
+                setState: { pot: true },
+                nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3FB',
+        location: 'well',
+        text: 'You came closer to the Fire Place, the flames are no more and the pot isnt boiling',
         options: [
             {
                 text: 'Go Back',
@@ -1331,6 +1392,72 @@ export const story = [
             {
                 text: 'Go Back',
                 nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3RC',
+        location: 'well',
+        text: 'You walked to the door on the right, the book shelf has flipped over, theres a.......glass of water? Its some sort of liquid',
+        options: [
+            {
+                text: 'Drink Water',
+                nextText: 'W3RDW'
+            },
+            {
+                text: 'Take Glass of Water',
+                nextText: 'W3RT'
+            },
+            {
+                text: 'Go Back',
+                nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3RDW',
+        location: 'well',
+        text: 'You were pretty thirsty so you decided to drink the glass of what your assuming is water.....................Unfortunately it wasnt drinkable and you got poisoned.........TRY AGAIN',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        id: 'W3RT',
+        location: 'well',
+        text: 'You decided to take the Glass of Whatever this is, it feels very strange....',
+        options: [
+            {
+                text: 'Continue',
+                setState: { glass: true },
+                nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3RD',
+        location: 'well',
+        text: 'You walked to the door on the right, you have picked up the glass of water',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W3'
+            }
+        ]
+    },
+
+    {
+        id: 'WT',
+        location: 'village',
+        text: 'You came out of the well but......the glass of liquid has mysteriously dissapeared',
+        options: [
+            {
+                text: 'Continue',
+                setState: { glass: false },
+                nextText: 'V-PW'
             }
         ]
     },
