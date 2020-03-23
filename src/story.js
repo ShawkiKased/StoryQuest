@@ -1139,7 +1139,7 @@ export const story = [
         text: 'You go downstairs and find yourself in a secret underground room, theres 2 doors and a fireplace with boiling pot',
         options: [
             {
-                text: 'Check Left Door',
+                text: 'Check the Left Door',
                 nextText: 'W3L'
             },
             {
