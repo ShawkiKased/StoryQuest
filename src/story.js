@@ -949,7 +949,6 @@ export const story = [
             },
             {
                 text: 'Life Potion',
-                requiredState: (currentState) => !currentState.lifePotion,
                 nextText: 'V-SP'
             },
             {
@@ -1003,8 +1002,19 @@ export const story = [
             },
             {
                 text: 'Trade Dark Gem for Life Potion',
-                requiredState: (currentState) => currentState.darkStone,
+                requiredState: (currentState) => currentState.darkGem,
                 setState: { darkGem: false, lifePotion: true },
+                nextText: 'V-SP2'
+            }
+        ]
+    },
+    {
+        id: 'V-SP2',
+        location: 'village',
+        text: 'ShopKeeper: Here you go, Keep in mind you can only use this once, if you want another, you will need to find me another Dark Gem',
+        options: [
+            {
+                text: 'Thank you',
                 nextText: 'V-S'
             }
         ]
