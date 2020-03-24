@@ -1140,7 +1140,13 @@ export const story = [
         options: [
             {
                 text: 'Check the Left Door',
+                requiredState: (currentState) => !currentState.pot,
                 nextText: 'W3L'
+            },
+            {
+                text: 'Check the Left Door',
+                requiredState: (currentState) => currentState.pot,
+                nextText: 'W3LB'
             },
             {
                 text: 'Check Fire Place',
@@ -1303,6 +1309,81 @@ export const story = [
                 text: 'Continue',
                 setState: { SD: true },
                 nextText: 'W3L'
+            }
+        ]
+    },
+    {
+        id: 'W3LB',
+        location: 'well',
+        text: 'You came closer to the Left Door, the metal door has slid open, leading to a staircase going up',
+        options: [
+            {
+                text: 'Climb up the Stairs',
+                nextText: 'W3LS'
+            },
+            {
+                text: 'Go back',
+                nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3LS',
+        location: 'well',
+        text: 'You climbed up the stairs and find yourself in a room with a switch and a window',
+        options: [
+            {
+                text: 'Pull the Switch',
+                nextText: 'W3LSS'
+            },
+            {
+                text: 'Check the window',
+                nextText: 'W3LSW'
+            },
+            {
+                text: 'Go back Downstairs',
+                nextText: 'W3'
+            }
+        ]
+    },
+    {
+        id: 'W3LSW',
+        location: 'well',
+        text: 'You checked the window, you can see downstairs.....Everything seems normal',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W3LS'
+            }
+        ]
+    },
+    {
+        id: 'W3LSS',
+        location: 'well',
+        text: 'You pulled the Switch...............You hear a rumble, the entire downtairs has flooded with water',
+        options: [
+            {
+                text: 'Pull the Switch',
+                nextText: 'W3LSS2'
+            },
+            {
+                text: 'Check the window',
+                nextText: 'W3LSW2'
+            },
+            {
+                text: 'Try to swim downstairs',
+                nextText: 'W3F'
+            }
+        ]
+    },
+    {
+        id: 'W3LSS2',
+        location: 'well',
+        text: 'You pulled the Switch again...............You hear a rumble, the flood has been drained and downstairs is free to walk back',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W3LS'
             }
         ]
     },
