@@ -995,16 +995,16 @@ export const story = [
     {
         id: 'V-SP',
         location: 'village',
-        text: 'ShopKeeper: I will trade you a Life Potion for a Dark Stone',
+        text: 'ShopKeeper: I will trade you a Life Potion for a Dark Gem',
         options: [
             {
                 text: 'Back',
                 nextText: 'V-S'
             },
             {
-                text: 'Trade Dark Stone for Life Potion',
+                text: 'Trade Dark Gem for Life Potion',
                 requiredState: (currentState) => currentState.darkStone,
-                setState: { darkStone: false, lifePotion: true },
+                setState: { darkGem: false, lifePotion: true },
                 nextText: 'V-S'
             }
         ]
@@ -1330,11 +1330,11 @@ export const story = [
     {
         id: 'W3LS',
         location: 'well',
-        text: 'You climbed up the stairs and find yourself in a room with a switch and a window',
+        text: 'You are up stairs and find yourself in a room with a switch and a window',
         options: [
             {
                 text: 'Pull the Switch',
-                nextText: 'W3LSS'
+                nextText: 'W3LSE'
             },
             {
                 text: 'Check the window',
@@ -1358,9 +1358,20 @@ export const story = [
         ]
     },
     {
-        id: 'W3LSS',
+        id: 'W3LSE',
         location: 'well',
         text: 'You pulled the Switch...............You hear a rumble, the entire downtairs has flooded with water',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W3LSS'
+            }
+        ]  
+    },   
+    {
+        id: 'W3LSS',
+        location: 'well',
+        text: 'You are upstairs, there is a window, a switch, and a flooded downstairs',
         options: [
             {
                 text: 'Pull the Switch',
@@ -1368,11 +1379,17 @@ export const story = [
             },
             {
                 text: 'Check the window',
+                requiredState: (currentState) => !currentState.darkGem,
                 nextText: 'W3LSW2'
             },
             {
+                text: 'Check the window',
+                requiredState: (currentState) => currentState.darkGem,
+                nextText: 'W3LSW3'
+            },
+            {
                 text: 'Try to swim downstairs',
-                nextText: 'W3F'
+                nextText: 'W3LSF'
             }
         ]
     },
@@ -1384,6 +1401,51 @@ export const story = [
             {
                 text: 'Continue',
                 nextText: 'W3LS'
+            }
+        ]
+    },
+    {
+        id: 'W3LSF',
+        location: 'well',
+        text: 'You tried to swim your way downstairs, unfortunately, you couldnt hold your breath too long and drowned......TRY AGAIN',
+        options: [
+            {
+                text: 'Restart',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        id: 'W3LSW2',
+        location: 'well',
+        text: 'You checked the window, the downstairs is entirely flooded.........WAIT, you see the WaterStone! It is floating in the flooded water........hm? There seems to be something stuck in the window frame....',
+        options: [
+            {
+                text: 'Open the Window',
+                nextText: 'W3DG'
+            }
+        ]
+    },
+    {
+        id: 'W3DG',
+        location: 'well',
+        text: 'You slighty opened the window for the object to slip out...........Its a Dark Gem!',
+        options: [
+            {
+                text: 'Continue',
+                setState: { darkGem: true },
+                nextText: 'W3LSSW3'
+            }
+        ]
+    },
+    {
+        id: 'W3LSSW3',
+        location: 'well',
+        text: 'You checked the window, the downstairs is entirely flooded.........WAIT, you see the WaterStone! It is floating in the flooded water.',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W3LSS'
             }
         ]
     },
