@@ -1389,17 +1389,28 @@ export const story = [
             },
             {
                 text: 'Check the window',
-                requiredState: (currentState) => !currentState.darkGem,
+                requiredState: (currentState) => !currentState.darkGem && !currentState.lifePotion && !currentState.waterStone,
                 nextText: 'W3LSW2'
             },
             {
                 text: 'Check the window',
-                requiredState: (currentState) => currentState.darkGem,
+                requiredState: (currentState) => (currentState.darkGem && !currentState.waterStone) || (currentState.lifePotion && !currentState.waterStone),
                 nextText: 'W3LSW3'
             },
             {
+                text: 'Check the window',
+                requiredState: (currentState) => currentState.waterStone,
+                nextText: 'W3LSW4'
+            },
+            {
                 text: 'Try to swim downstairs',
+                requiredState: (currentState) => !currentState.lifePotion && !currentState.waterStone,
                 nextText: 'W3LSF'
+            },
+            {
+                text: 'Use Life Potion and try to swim downstairs',
+                requiredState: (currentState) => currentState.lifePotion && !currentState.waterStone,
+                nextText: 'W3LSUW'
             }
         ]
     },
@@ -1426,6 +1437,29 @@ export const story = [
         ]
     },
     {
+        id: 'W3LSUW',
+        location: 'well',
+        text: 'You drank the Life Potion and swam downstairs, right before your breath ran out of air, the Life Potion gave you a burst of stronger energy........',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 'W3LSUW2'
+            }
+        ]
+    },
+    {
+        id: 'W3LSUW2',
+        location: 'well',
+        text: 'You swam deeper and grabbed the Water Stone, and swam back to the top floor.......HUZZAH, YOU HAVE GAINED THE WATER STONE!',
+        options: [
+            {
+                text: 'Continue',
+                setState: { lifePotion: false, waterStone: true},
+                nextText: 'W3LSS'
+            }
+        ]
+    },
+    {
         id: 'W3LSW2',
         location: 'well',
         text: 'You checked the window, the downstairs is entirely flooded.........WAIT, you see the WaterStone! It is floating in the flooded water........hm? There seems to be something stuck in the window frame....',
@@ -1444,14 +1478,25 @@ export const story = [
             {
                 text: 'Continue',
                 setState: { darkGem: true },
-                nextText: 'W3LSSW3'
+                nextText: 'W3LSW3'
             }
         ]
     },
     {
-        id: 'W3LSSW3',
+        id: 'W3LSW3',
         location: 'well',
         text: 'You checked the window, the downstairs is entirely flooded.........WAIT, you see the WaterStone! It is floating in the flooded water.',
+        options: [
+            {
+                text: 'Go Back',
+                nextText: 'W3LSS'
+            }
+        ]
+    },
+    {
+        id: 'W3LSW4',
+        location: 'well',
+        text: 'You checked the window, the downstairs is entirely flooded.....',
         options: [
             {
                 text: 'Go Back',
