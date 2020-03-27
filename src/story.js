@@ -3,11 +3,15 @@ export const story = [
     {
         id: 0,
         location: 'kingdom',
-        text: '*Instructions* Read through your adventure and use your mouse to click on the choice. Everything has a purpose, a cave needs a lanturn, so if you do not have one, you will not be able to progress, explore and discover ways to solve the puzzles each dungeon brings!',
+        text: '*Instructions* Welcome to StoryQuest! A Text Based Puzzle/Adventure Game! Navigate through the world in search of Sacred Stones to Diminish Evil! Clicking is your best friend, click the button options carefully to solve the perilous puzzles on your journey!',
         options: [
             {
-                text: 'Start Game!',
-                nextText: 'I'
+                text: 'Continue!',
+                nextText: 'A'
+            },
+            {
+                text: 'Start New Game!',
+                nextText: 'Z'
             }
         ]
     },
