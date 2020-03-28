@@ -39,7 +39,8 @@ window.addEventListener("DOMContentLoaded", () => {
       mine: "./src/images/Backgrounds/mine.jpg",
       village: "./src/images/Backgrounds/town.jpg",
       dark: "./src/images/Backgrounds/dark.jpg",
-      well: "./src/images/Backgrounds/well.jpg"
+      well: "./src/images/Backgrounds/well.jpg",
+      inventory: "./src/images/Backgrounds/inventory.jpg"
     }
     const textNode = story.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text

@@ -12,12 +12,27 @@ export const story = [
             {
                 text: 'Start New Game!',
                 setState: {},
-                nextText: 'I'
+                nextText: 'N'
             }
         ]
     },
     {
         id: 'I',
+        location: 'inventory',
+        text: 'Heres what you current have on you:',
+        options: [
+            {
+                text: 'Earth Stone',
+                requiredState: (currentState) => currentState.earthStone
+            },
+            {
+                text: 'Return to Game',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        id: 'N',
         location: 'kingdom',
         text: 'Queen Elizabeth: Welcome Hero, we need your help,the evil King Shawki is ruling the Kingdom with an iron fist! We need someone who is both brave and smart! You will need to traverse the Kingdom in search of the elemental stones that can make you strong enough to face him! Good Luck and be careful on your long journey Hero!',
         options: [
@@ -48,6 +63,10 @@ export const story = [
                 text: 'The Tower of King Shawki',
                 requiredState: (currentState) => currentState.earthStone && currentState.waterStone && currentState.fireStone,
                 nextText: 'W4'
+            },
+            {
+                text: 'Check Inventory',
+                nextText: 'I'
             }
         ]
     },
