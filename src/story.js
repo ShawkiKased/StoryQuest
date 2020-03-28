@@ -11,7 +11,8 @@ export const story = [
             },
             {
                 text: 'Start New Game!',
-                nextText: 'Z'
+                setState: {},
+                nextText: 'I'
             }
         ]
     },
