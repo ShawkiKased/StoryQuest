@@ -40,6 +40,8 @@ There will be many unique areas in the game, all of which will have different ba
 
 ``document.body.style.backgroundImage = `url(${backgrounds[a]})`;``
 
+* Town Example:
+
 <!-- ## Functionality and MVP's
 
 In StoryQuest, the User will be able to:
