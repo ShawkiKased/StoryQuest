@@ -19,20 +19,26 @@ Player starts on the base area. Gets to choose where on the map to go. A Scenari
 ### How Scenario's Work
 
 Certain Scenario's will stop the player from entering or fight based on whether they have an item or not.
-I used a state object that will be used to carry the true or false values of what a player can and can't do and based it on a RequiredState option. Here's an example scenario from Story.js, in this code snippet, the player will only have the option to fix the minecart if they have the lever on them:
+I used a state object that will be used to carry the true or false values of what a player can and can't do and based it on a RequiredState option. Here's an example scenario from Story.js, in this code snippet, the player will only have the option to light up the cave if they have the lanturn on them:
 
 ``options: [
             {
-                text: 'Go Back',
-                nextText: 'W2E'
+                text: 'Return to Map',
+                nextText: 1
             },
             {
-                text: 'Place Lever',
-                requiredState: (currentState) => currentState.lever,
-                nextText: 'W2M2'
+                text: 'Use Lantern',
+                requiredState: (currentState) => currentState.lanturn,
+                nextText: 'W2-'
             }
         ]
 ``
+
+* Cave without Lanturn:
+![CaveExample](https://i.imgur.com/9HKZAhl.png)
+
+* Cave with Lanturn:
+![CaveExample2](https://i.imgur.com/vpOr5S9.png)
 
 ### Backgrounds
 
@@ -41,6 +47,10 @@ There will be many unique areas in the game, all of which will have different ba
 ``document.body.style.backgroundImage = `url(${backgrounds[a]})`;``
 
 * Town Example:
+![TownExample](https://i.imgur.com/jJ1aH3A.jpg)
+
+*Forest Example:
+![ForestExample](https://i.imgur.com/XQanU32.png)
 
 <!-- ## Functionality and MVP's
 
