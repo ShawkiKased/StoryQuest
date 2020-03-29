@@ -1194,7 +1194,7 @@ export const story = [
     {
         id: 'VPLW',
         location: 'village',
-        text: 'You used your Mirror Of Truth, the "Lovely Couple" have suddenly turned into monsters',
+        text: 'You used your mirror Of truth, the "lovely couple" have suddenly turned into monsters',
         options: [
             {
                 text: 'Continue',
@@ -1205,7 +1205,7 @@ export const story = [
     {
         id: 'VPLWF',
         location: 'village',
-        text: 'Bad Choice, the monsters managed to attack you and knock you out...........Try Again',
+        text: 'Bad choice, the monsters managed to attack you and knock you out...........Try Again',
         options: [
             {
                 text: 'Continue',
@@ -1219,15 +1219,15 @@ export const story = [
         text: 'Monsters: "What the!? He figured us out, lets get em!" The monsters charge towards you.....',
         options: [
             {
-                text: 'Use Hammer',
+                text: 'Use hammer',
                 nextText: 'VPLWF'
             },
             {
-                text: 'Use Lantern',
+                text: 'Use lantern',
                 nextText: 'VPLW3'
             },
             {
-                text: 'Dodge Attack',
+                text: 'Dodge attack',
                 nextText: 'VPLWF'
             }
         ]
@@ -1235,10 +1235,10 @@ export const story = [
     {
         id: 'VPLW3',
         location: 'village',
-        text: 'You used the Lanturn to blind the monsters, nows your chance!',
+        text: 'You used the lanturn to blind the monsters, nows your chance!',
         options: [
             {
-                text: 'Use Hammer',
+                text: 'Use hammer',
                 nextText: 'VPLWF4',
             }
         ]
@@ -1246,7 +1246,7 @@ export const story = [
     {
         id: 'VPLWF4',
         location: 'village',
-        text: 'You knocked the monsters out with your Hammer, they are defeated! The well has now changed, a set of stairs have appeared going underground.....',
+        text: 'You knocked the monsters out with your hammer, they are defeated! The well has now changed, a set of stairs have appeared going underground.....',
         options: [
             {
                 text: 'Continue',
@@ -1261,11 +1261,11 @@ export const story = [
         text: 'You go near the well, that now has a set of stairs leading underground.',
         options: [
             { 
-                text: 'Go down the Well',
+                text: 'Go down the well',
                 nextText: 'W3',
             },
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'V-P'
             }
         ]
@@ -1276,52 +1276,52 @@ export const story = [
         text: 'You go downstairs and find yourself in a secret underground room, theres 2 doors and a fireplace with boiling pot',
         options: [
             {
-                text: 'Check the Left Door',
+                text: 'Check the left door',
                 requiredState: (currentState) => !currentState.pot,
                 nextText: 'W3L'
             },
             {
-                text: 'Check the Left Door',
+                text: 'Check the left door',
                 requiredState: (currentState) => currentState.pot,
                 nextText: 'W3LB'
             },
             {
-                text: 'Check Fire Place',
+                text: 'Check fireplace',
                 requiredState: (currentState) => !currentState.pot,
                 nextText: 'W3F'
             },
             {
-                text: 'Check Fire Place',
+                text: 'Check fireplace',
                 requiredState: (currentState) => currentState.pot,
                 nextText: 'W3FB'
             },
             {
-                text: 'Check the Right Door',
+                text: 'Check the right door',
                 requiredState: (currentState) => !currentState.book && !currentState.SD,
                 nextText: 'W3R'
             },
             {
-                text: 'Check the Right Door',
+                text: 'Check the right Door',
                 requiredState: (currentState) => currentState.book && !currentState.SD,
                 nextText: 'W3RB'
             },
             {
-                text: 'Check the Right Door',
+                text: 'Check the right door',
                 requiredState: (currentState) => currentState.book && currentState.SD && !currentState.glass,
                 nextText: 'W3RC'
             },
             {
-                text: 'Check the Right Door',
+                text: 'Check the right door',
                 requiredState: (currentState) => currentState.book && currentState.SD && currentState.glass,
                 nextText: 'W3RD'
             },
             {
-                text: 'Go Back Outside',
+                text: 'Go back outside',
                 requiredState: (currentState) => !currentState.glass,
                 nextText: 'V-PW'
             },
             {
-                text: 'Go Back Outside',
+                text: 'Go back outside',
                 requiredState: (currentState) => currentState.glass,
                 nextText: 'WT'
             }
@@ -1333,11 +1333,11 @@ export const story = [
         text: 'You walked to the door on the left, it is a metal door with no opening...',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W3'
             },
             {
-                text: '"Knock on the Steel"',
+                text: '"Knock on the steel"',
                 requiredState: (currentState) => currentState.bookAdvice && !currentState.SD,
                 nextText: 'W3LK'
             }
@@ -1346,22 +1346,22 @@ export const story = [
     {
         id: 'W3LK',
         location: 'well',
-        text: 'You came closer to the Door and decided to do what the old man suggestion....what should you do first?',
+        text: 'You came closer to the door and decided to do what the old man suggested....what should you do first?',
         options: [
             {
-                text: 'Knock 2 Heavy',
+                text: 'Knock 2 times heavy',
                 nextText: 'W3LK2'
             },
             {
-                text: 'Knock 2 Light',
+                text: 'Knock 2 times light',
                 nextText: 'W3LK2'
             },
             {
-                text: 'Knock 1 Heavy',
+                text: 'Knock 1 time heavy',
                 nextText: 'W3LK2'
             },
             {
-                text: 'Knock 3 Light',
+                text: 'Knock 3 times light',
                 setState: {S1: true},
                 nextText: 'W3LK2'
             }
@@ -1373,22 +1373,22 @@ export const story = [
         text: 'What should you do second?',
         options: [
             {
-                text: 'Knock 1 Heavy',
+                text: 'Knock 1 time heavy',
                 setState: {S1: false},
                 nextText: 'W3LK3'
             },
             {
-                text: 'Knock 1 Light',
+                text: 'Knock 1 time light',
                 setState: { S1: false },
                 nextText: 'W3LK3'
             },
             {
-                text: 'Knock 3 Heavy',
+                text: 'Knock 3 times heavy',
                 setState: {S2: true},
                 nextText: 'W3LK3'
             },
             {
-                text: 'Knock 2 Light',
+                text: 'Knock 2 times light',
                 setState: { S1: false },
                 nextText: 'W3LK3'
             }
@@ -1400,27 +1400,27 @@ export const story = [
         text: 'Finally, what should you do?',
         options: [
             {
-                text: 'Knock 1 Heavy',
+                text: 'Knock 1 time heavy',
                 setState: {S1: false, S2: false},
                 nextText: 'W3LKF'
             },
             {
-                text: 'Knock 2 Light',
+                text: 'Knock 2 times light',
                 requiredState: (currentState) => currentState.S1 && currentState.S2,
                 nextText: 'W3LKP'
             },
             {
-                text: 'Knock 2 Light',
+                text: 'Knock 2 times light',
                 requiredState: (currentState) => !currentState.S1 || !currentState.S2,
                 nextText: 'W3LKF'
             },
             {
-                text: 'Knock 3 Heavy',
+                text: 'Knock 3 times heavy',
                 setState: { S1: false, S2: false },
                 nextText: 'W3LKF'
             },
             {
-                text: 'Knock 4 Light',
+                text: 'Knock 4 times light',
                 setState: { S1: false, S2: false },
                 nextText: 'W3LKF'
             }
@@ -1429,7 +1429,7 @@ export const story = [
     {
         id: 'W3LKF',
         location: 'well',
-        text: '.............Unfortunately Nothing Happened.......',
+        text: '.............Unfortunately nothing happened.......',
         options: [
             {
                 text: 'Continue',
@@ -1440,7 +1440,7 @@ export const story = [
     {
         id: 'W3LKP',
         location: 'well',
-        text: '.....................You hear a rumbling of something moving......It seems to have come from the right side',
+        text: '.....................You hear a rumbling of something moving. It seems to have come from the right side',
         options: [
             {
                 text: 'Continue',
@@ -1452,10 +1452,10 @@ export const story = [
     {
         id: 'W3LB',
         location: 'well',
-        text: 'You came closer to the Left Door, the metal door has slid open, leading to a staircase going up',
+        text: 'You came closer to the left door, the metal door has slid open, leading to a staircase going up',
         options: [
             {
-                text: 'Climb up the Stairs',
+                text: 'Climb up the stairs',
                 nextText: 'W3LS'
             },
             {
@@ -1470,7 +1470,7 @@ export const story = [
         text: 'You are up stairs and find yourself in a room with a switch and a window',
         options: [
             {
-                text: 'Pull the Switch',
+                text: 'Pull the switch',
                 nextText: 'W3LSE'
             },
             {
@@ -1478,7 +1478,7 @@ export const story = [
                 nextText: 'W3LSW'
             },
             {
-                text: 'Go back Downstairs',
+                text: 'Go back downstairs',
                 nextText: 'W3'
             }
         ]
@@ -1489,7 +1489,7 @@ export const story = [
         text: 'You checked the window, you can see downstairs.....Everything seems normal',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W3LS'
             }
         ]
@@ -1497,7 +1497,7 @@ export const story = [
     {
         id: 'W3LSE',
         location: 'well',
-        text: 'You pulled the Switch...............You hear a rumble, the entire downtairs has flooded with water',
+        text: 'You pulled the switch...............You hear a rumble, the entire downtairs has now been flooded with water',
         options: [
             {
                 text: 'Continue',
@@ -1511,7 +1511,7 @@ export const story = [
         text: 'You are upstairs, there is a window, a switch, and a flooded downstairs',
         options: [
             {
-                text: 'Pull the Switch',
+                text: 'Pull the switch',
                 nextText: 'W3LSS2'
             },
             {
@@ -1535,7 +1535,7 @@ export const story = [
                 nextText: 'W3LSF'
             },
             {
-                text: 'Use Life Potion and try to swim downstairs',
+                text: 'Use life potion and try to swim downstairs',
                 requiredState: (currentState) => currentState.lifePotion && !currentState.waterStone,
                 nextText: 'W3LSUW'
             }
@@ -1544,7 +1544,7 @@ export const story = [
     {
         id: 'W3LSS2',
         location: 'well',
-        text: 'You pulled the Switch again...............You hear a rumble, the flood has been drained and downstairs is free to walk back',
+        text: 'You pulled the switch again...............You hear a rumble, the flood has been drained and downstairs is free to walk back',
         options: [
             {
                 text: 'Continue',
@@ -1555,7 +1555,7 @@ export const story = [
     {
         id: 'W3LSF',
         location: 'well',
-        text: 'You tried to swim your way downstairs, unfortunately, you couldnt hold your breath too long and drowned......TRY AGAIN',
+        text: 'You tried to swim your way downstairs, unfortunately, you could not hold your breath for too long and drowned......TRY AGAIN',
         options: [
             {
                 text: 'Restart',
@@ -1566,7 +1566,7 @@ export const story = [
     {
         id: 'W3LSUW',
         location: 'well',
-        text: 'You drank the Life Potion and swam downstairs, right before your breath ran out of air, the Life Potion gave you a burst of stronger energy........',
+        text: 'You drank the life potion and swam downstairs, right before your breath ran out of air, the Life Potion gave you a burst of stronger energy........',
         options: [
             {
                 text: 'Continue',
@@ -1577,7 +1577,7 @@ export const story = [
     {
         id: 'W3LSUW2',
         location: 'well',
-        text: 'You swam deeper and grabbed the Water Stone, and swam back to the top floor.......HUZZAH, YOU HAVE GAINED THE WATER STONE!',
+        text: 'You swim deeper and grabbed the Water Stone, and swim back to the top floor.......HUZZAH, YOU HAVE GAINED THE WATER STONE!',
         options: [
             {
                 text: 'Continue',
@@ -1589,10 +1589,10 @@ export const story = [
     {
         id: 'W3LSW2',
         location: 'well',
-        text: 'You checked the window, the downstairs is entirely flooded.........WAIT, you see the WaterStone! It is floating in the flooded water........hm? There seems to be something stuck in the window frame....',
+        text: 'You checked the window, the downstairs is entirely flooded.........WAIT, you see the Water Stone! It is floating on top of the flooding water........hm? There seems to be something stuck in the window frame.',
         options: [
             {
-                text: 'Open the Window',
+                text: 'Open the window',
                 nextText: 'W3DG'
             }
         ]
@@ -1600,7 +1600,7 @@ export const story = [
     {
         id: 'W3DG',
         location: 'well',
-        text: 'You slighty opened the window for the object to slip out...........Its a Dark Gem!',
+        text: 'You slighty opened the window for the object to slip out...........Its a dark gem!',
         options: [
             {
                 text: 'Continue',
@@ -1612,7 +1612,7 @@ export const story = [
     {
         id: 'W3LSW3',
         location: 'well',
-        text: 'You checked the window, the downstairs is entirely flooded.........WAIT, you see the WaterStone! It is floating in the flooded water.',
+        text: 'You checked the window, downstairs is entirely flooded.........WAIT, you see the Water Stone! It is floating on top of the flooded water.',
         options: [
             {
                 text: 'Go Back',
@@ -1626,7 +1626,7 @@ export const story = [
         text: 'You checked the window, the downstairs is entirely flooded.....',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W3LSS'
             }
         ]
@@ -1634,15 +1634,15 @@ export const story = [
     {
         id: 'W3F',
         location: 'well',
-        text: 'You came closer to the FirePlace, there seems to be something boiling in the pot, but the flames are too hot to grab it...',
+        text: 'You come closer to the fireplace, there seems to be something boiling in the pot, but the flames are too hot to grab it.',
         options: [
             {
-                text: 'Throw Glass of Liquid in the Flames',
+                text: 'Throw glass of liquid in the flames',
                 requiredState: (currentState) => currentState.glass,
                 nextText: 'W3F2'
             },
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W3'
             }
         ]
@@ -1662,7 +1662,7 @@ export const story = [
     {
         id: 'W3F3',
         location: 'well',
-        text: 'You looked inside the pot, there seems to be a switch underneath it, you pressed it.............................You hear a rumbling sound coming from the left side....',
+        text: 'You looked inside the pot, there seems to be a switch underneath it, you pressed it.............................You hear a rumbling sound coming from the left side.',
         options: [
             {
                 text: 'Continue',
@@ -1674,10 +1674,10 @@ export const story = [
     {
         id: 'W3FB',
         location: 'well',
-        text: 'You came closer to the Fire Place, the flames are no more and the pot isnt boiling',
+        text: 'You came closer to the fireplace, the flames are no more and the pot isnt boiling',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W3'
             }
         ]
@@ -1716,7 +1716,7 @@ export const story = [
         text: 'You walked to the door on the right, you have taken the book from the book shelf',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W3'
             }
         ]
@@ -1727,15 +1727,15 @@ export const story = [
         text: 'You walked to the door on the right, the book shelf has flipped over, theres a.......glass of water? Its some sort of liquid',
         options: [
             {
-                text: 'Drink Water',
+                text: 'Drink liquid',
                 nextText: 'W3RDW'
             },
             {
-                text: 'Take Glass of Water',
+                text: 'Take glass of liquid',
                 nextText: 'W3RT'
             },
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W3'
             }
         ]
@@ -1743,7 +1743,7 @@ export const story = [
     {
         id: 'W3RDW',
         location: 'well',
-        text: 'You were pretty thirsty so you decided to drink the glass of what your assuming is water.....................Unfortunately it wasnt drinkable and you got poisoned.........TRY AGAIN',
+        text: 'You were pretty thirsty so you decided to drink the glass of what your assuming is water.....................Unfortunately it wasnt drinkable and you got poisoned. TRY AGAIN',
         options: [
             {
                 text: 'Continue',
@@ -1754,7 +1754,7 @@ export const story = [
     {
         id: 'W3RT',
         location: 'well',
-        text: 'You decided to take the Glass of Whatever this is, it feels very strange....',
+        text: 'You decided to take the glass of whatever this is, it feels very strange....',
         options: [
             {
                 text: 'Continue',
@@ -1766,7 +1766,7 @@ export const story = [
     {
         id: 'W3RD',
         location: 'well',
-        text: 'You walked to the door on the right, you have picked up the glass of water',
+        text: 'You walked to the door on the right and have picked up the glass of water',
         options: [
             {
                 text: 'Continue',
@@ -1790,7 +1790,7 @@ export const story = [
     {
         id: 'V-PK',
         location: 'village',
-        text: '"Stop running away so fast Cindy, i cant tag you", "Try to keep up Tommy", "Hey Gabriel, i heard the well is haunted", "Well I heard you can find a GoblinBerry Tree if you stay left in the forest Maze"',
+        text: '"Stop running away so fast Cindy, i cant tag you", "Try to keep up Tommy", "Hey Gabriel, i heard the well is haunted", "Well I heard you can find a goblin berry tree if you stay left in the forest maze"',
         options: [
             {
                 text: 'Go Back',
@@ -1801,33 +1801,33 @@ export const story = [
     {
         id: 'V-PO',
         location: 'village',
-        text: 'Wise Old Man: Hello there Hero....is there something you would like to talk about?',
+        text: 'Wise old man: Hello there Hero....is there something you would like to talk about?',
         options: [
             {
-                text: 'About the EarthStone',
+                text: 'About the Earth Stone',
                 nextText: 'V-PO1'
             },
             {
-                text: 'About the FireStone',
+                text: 'About the Fire Stone',
                 nextText: 'V-PO2'
             },
             {
-                text: 'About the WaterStone',
+                text: 'About the Water Stone',
                 requiredState: (currentState) => !currentState.earthStone || !currentState.fireStone,
                 nextText: 'V-PO3A'
             },
             {
-                text: 'About the WaterStone',
+                text: 'About the Water Stone',
                 requiredState: (currentState) => currentState.earthStone && currentState.fireStone,
                 nextText: 'V-PO3B'
             },
             {
-                text: 'Do you know anything about this Book?',
+                text: 'Do you know anything about this book?',
                 requiredState: (currentState) => currentState.book,
                 nextText: 'V-PO4'
             },
             {
-                text: 'Nothing, Thank You',
+                text: 'Nothing, thank you',
                 nextText: 'V-P'
             }
         ]
@@ -1835,7 +1835,7 @@ export const story = [
     {
         id: 'V-PO1',
         location: 'village',
-        text: 'Wise Old Man: The EarthStone is hidden in the woods, but youll need to find your way through a tricky maze.',
+        text: 'Wise old man: The Earth Stone is hidden in the woods, but youll need to find your way through a tricky maze.',
         options: [
             {
                 text: 'Continue',
@@ -1846,7 +1846,7 @@ export const story = [
     {
         id: 'V-PO2',
         location: 'village',
-        text: 'Wise Old Man: The FireStone is hidden in the caves, although without a light source, it would be futile to go there now.',
+        text: 'Wise old man: The Fire Stone is hidden in the caves, although without a light source, it would be futile to go there now.',
         options: [
             {
                 text: 'Continue',
@@ -1857,7 +1857,7 @@ export const story = [
     {
         id: 'V-PO3A',
         location: 'village',
-        text: 'Wise Old Man: Nobody knows anything about the Water Stone right now, come back when you find the other 2 first',
+        text: 'Wise old man: Nobody knows anything about the Water Stone right now, come back when you find the other 2 first',
         options: [
             {
                 text: 'Continue',
@@ -1868,7 +1868,7 @@ export const story = [
     {
         id: 'V-PO3B',
         location: 'village',
-        text: 'Wise Old Man: Ah I see your back with both the FireStone and EarthStone. Ive done some reading and found out that the WaterStone is deep in an underground dungeon that is only accessible to those that have the Mirror Of Truth. Where to find such a thing is a mystery unfortunately, however i have read that a Forest Goblin should know. If you can find one, ask him about it.',
+        text: 'Wise old man: Ah I see your back with both the Fire Stone and Earth Stone. Ive done some reading and found out that the Water Stone is deep in an underground dungeon that is only accessible to those that have the Mirror of Truth. Where to find such a thing is a mystery unfortunately, however i have read that a forest goblin should know. If you can find one, ask him about it.',
         options: [
             {
                 text: 'Continue',
@@ -1880,7 +1880,7 @@ export const story = [
     {
         id: 'V-PO4',
         location: 'village',
-        text: 'Wise Old Man: I do, let me take a look, hmmm................Ah! It says "Knock on the Steel, 3 light, 3 heavy, 2 light no order more"',
+        text: 'Wise old man: I do, let me take a look, hmmm................Ah! It says "Knock on the Steel, 3 light, 3 heavy, 2 light no order more" Do you know what this could be referring to?',
         options: [
             {
                 text: 'Continue',
