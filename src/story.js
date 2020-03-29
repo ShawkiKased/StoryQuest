@@ -3,14 +3,14 @@ export const story = [
     {
         id: 0,
         location: 'kingdom',
-        text: '*Instructions* Welcome to StoryQuest! A Text Based Puzzle/Adventure Game! Navigate through the world in search of Sacred Stones to Diminish Evil! Clicking is your best friend, click the button options carefully to solve the perilous puzzles on your journey! You will only have 3 lives, after that you will start all over so be careful!',
+        text: '*Instructions* Welcome to StoryQuest! A text-based puzzle/adventure game! Navigate through the world in search of the Sacred Stones to diminish evil! Clicking is your best friend, click the button options carefully to solve the perilous puzzles on your journey! You will only have 3 lives, fail 3 times, and you will start all over so be careful!',
         options: [
             // {
             //     text: 'Continue!',
             //     nextText: 'C'
             // },
             {
-                text: 'Start New Game!',
+                text: 'Start new game!',
                 setState: { lives: 3},
                 nextText: 'N'
             }
@@ -22,15 +22,15 @@ export const story = [
         text: 'Heres what you current have on you:',
         options: [
             {
-                text: 'Key Items',
+                text: 'Key items',
                 nextText: 'IK'
             },
             {
-                text: 'Tradeable/Disposable Items',
+                text: 'Tradeable/Disposable items',
                 nextText: 'IT'
             },
             {
-                text: 'Return to Game',
+                text: 'Return to game',
                 nextText: 1
             }
         ]
@@ -38,23 +38,26 @@ export const story = [
     {
         id: 'IK',
         location: 'inventory',
-        text: 'Inventory: Key Items',
+        text: 'Inventory: Key items',
         options: [
             {
-                text: 'Earth Stone',
+                text: 'Earth stone',
                 requiredState: (currentState) => currentState.earthStone
             },
             {
-                text: 'Fire Stone',
+                text: 'Fire stone',
                 requiredState: (currentState) => currentState.fireStone
             },
             {
-                text: 'Water Stone',
+                text: 'Water stone',
                 requiredState: (currentState) => currentState.waterStone
             },
             {
-                text: 'Goblins Blessing',
+                text: 'Goblins blessing',
                 requiredState: (currentState) => currentState.goblinBlessing
+            },
+            {
+                text: 'Note: "Right Right Left"'
             },
             {
                 text: 'Lanturn',
@@ -65,7 +68,7 @@ export const story = [
                 requiredState: (currentState) => currentState.hammer
             },
             {
-                text: 'Mirror of Truth',
+                text: 'Mirror of truth',
                 requiredState: (currentState) => currentState.mirror
             },
             {
@@ -73,7 +76,7 @@ export const story = [
                 requiredState: (currentState) => currentState.book
             },
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'I'
             }
         ]
@@ -81,18 +84,18 @@ export const story = [
     {
         id: 'IT',
         location: 'inventory',
-        text: 'Inventory: Tradeable/Disposable Items',
+        text: 'Inventory: Tradeable/Disposable items',
         options:[
             {
-                text: 'Goblin Berries',
+                text: 'Goblin berries',
                 requiredState: (currentState) => currentState.goblinBerry
             },
             {
-                text: 'Star Fruit',
+                text: 'Star fruit',
                 requiredState: (currentState) => currentState.starFruit
             },
             {
-                text: 'Ruby Gem',
+                text: 'Ruby gem',
                 requiredState: (currentState) => currentState.rubyGem
             },
             {
@@ -100,19 +103,19 @@ export const story = [
                 requiredState: (currentState) => currentState.lever
             },
             {
-                text: 'Golden Goblin Berries',
+                text: 'Golden goblin berries',
                 requiredState: (currentState) => currentState.goldenBerry
             },
             {
-                text: 'Dark Gem',
+                text: 'Dark gem',
                 requiredState: (currentState) => currentState.darkGem
             },
             {
-                text: 'Life Potion',
+                text: 'Life potion',
                 requiredState: (currentState) => currentState.lifePotion
             },
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'I'
             }
         ]
@@ -120,7 +123,7 @@ export const story = [
     {
         id: 'N',
         location: 'kingdom',
-        text: 'Queen Elizabeth: Welcome Hero, we need your help, the evil King Shawki is ruling the Kingdom with an iron fist! We need someone who is both brave and smart! You will need to traverse the kingdom in search of the elemental stones that can make you strong enough to face him! Good Luck and be careful on your long journey Hero!',
+        text: 'Queen Elizabeth: Welcome Hero, we need your help, the evil King Shawki is ruling the kingdom with an iron fist! We need someone who is both brave and smart! You will need to traverse the kingdom in search of the elemental stones that can make you strong enough to face him! Good Luck and be careful on your long journey Hero!',
         options: [
             {
                 text: 'Start!',
@@ -135,24 +138,24 @@ export const story = [
         text: 'Where would you like to go Hero?',
         options: [
             {
-                text: 'The Woods',
+                text: 'Woods',
                 nextText: 'W1'
             },
             {
-                text: 'The Caves',
+                text: 'Caves',
                 nextText: 'W2'
             },
             {
-                text: 'The Village',
+                text: 'Village',
                 nextText: 'V'
             },
             {
-                text: 'The Tower of King Shawki',
+                text: 'The tower of King Shawki',
                 requiredState: (currentState) => currentState.earthStone && currentState.waterStone && currentState.fireStone,
                 nextText: 'W4'
             },
             {
-                text: 'Check Inventory',
+                text: 'Check inventory',
                 nextText: 'I'
             }
         ]
@@ -178,23 +181,23 @@ export const story = [
         text: 'You reached the entrance of the maze, theres 3 paths and a goblin sitting on the floor',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-1'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-2'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-3'
             },
             {
-                text: 'Talk to Goblin',
+                text: 'Talk to goblin',
                 nextText: 'W1G'
             },
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W1'
             }
         ]
@@ -202,7 +205,7 @@ export const story = [
     {
         id: 'W1M-E',
         location: 'forest',
-        text: 'You have unfortunately got yourself lost in the maze, you lost a life TRY AGAIN',
+        text: 'You have unfortunately got yourself lost in the maze, you lost a life. TRY AGAIN',
         options: [
             {
                 text: 'Continue (Lifes left: 2)',
@@ -217,7 +220,7 @@ export const story = [
                 nextText: 'W1M'
             },
             {
-                text: 'GAMEOVER, Start New Game',
+                text: 'GAMEOVER, start new game',
                 requiredState: (currentState) => currentState.lives === 1,
                 nextText: 'N'
             }
@@ -226,18 +229,18 @@ export const story = [
     {
         id: 'W1M-1',
         location: 'forest',
-        text: 'You started Straight and find 3 more paths',
+        text: 'You started straight and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-1-1'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-1-2'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-1-3'
             }
         ]
@@ -245,18 +248,18 @@ export const story = [
     {
         id: 'W1M-1-1',
         location: 'forest',
-        text: 'You went Straight again and find 3 more paths',
+        text: 'You went straight again and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-E'
             }
         ]
@@ -264,18 +267,18 @@ export const story = [
     {
         id: 'W1M-1-2',
         location: 'forest',
-        text: 'You went Left and find 3 more paths',
+        text: 'You went left and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-E'
             }
         ]
@@ -283,18 +286,18 @@ export const story = [
     {
         id: 'W1M-1-3',
         location: 'forest',
-        text: 'You went Right and find 3 more paths',
+        text: 'You went right and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-S'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-E'
             }
         ]
@@ -302,20 +305,20 @@ export const story = [
     {
         id: 'W1M-S',
         location: 'forest',
-        text: 'You find yourself....in a field of flowers, in front of you is a pedastal which seems to contain the EarthStone',
+        text: 'You find yourself....in a field of flowers, in front of you is a pedastal which seems to contain the Earth stone',
         options: [
             {
-                text: 'Grab EarthStone',
+                text: 'Grab Earth stone',
                 requiredState: (currentState) => !currentState.earthStone && !currentState.goblinBlessing,
                 nextText: 'W1M-S1'
             },
             {
-                text: 'Grab EarthStone',
+                text: 'Grab Earth stone',
                 requiredState: (currentState) => currentState.goblinBlessing && !currentState.earthStone,
                 nextText: 'W1M-S2'
             },
             {
-                text: 'You have already Taken the stone, Note: "Right Right Left" Continue',
+                text: 'You have already taken the stone, continue',
                 requiredState: (currentState) => currentState.earthStone,
                 nextText: 'W1M'
             }
@@ -324,7 +327,7 @@ export const story = [
     {
         id: 'W1M-S1',
         location: 'forest',
-        text: 'You go for the Stone only to see it covered in a force field, theres a note "Get the Goblins blessing for the stone"',
+        text: 'You go for the stone only to see it covered in a force field, theres a note: "Get the goblins blessing for the stone"',
         options: [
             {
                 text: 'Continue',
@@ -336,11 +339,11 @@ export const story = [
     {
         id: 'W1M-S2',
         location: 'forest',
-        text: 'You reach for the stone, and HUZZAH, your grabbed it: EARTHSTONE ACQUIRED!............................hm? There seems to be a note under the stone...."Right Right Left"',
+        text: 'You reach for the stone.....you grabbed it: HUZZAH EARTH STONE ACQUIRED!............................hm? There seems to be a note under the stone...."Right Right Left"',
         options: [
             {
                 text: 'Continue',
-                setState: {earthStone: true},
+                setState: {earthStone: true, note: true},
                 nextText: 'W1M'
             }
         ]
