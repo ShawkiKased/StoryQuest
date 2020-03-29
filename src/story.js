@@ -3,15 +3,15 @@ export const story = [
     {
         id: 0,
         location: 'kingdom',
-        text: '*Instructions* Welcome to StoryQuest! A Text Based Puzzle/Adventure Game! Navigate through the world in search of Sacred Stones to Diminish Evil! Clicking is your best friend, click the button options carefully to solve the perilous puzzles on your journey!',
+        text: '*Instructions* Welcome to StoryQuest! A Text Based Puzzle/Adventure Game! Navigate through the world in search of Sacred Stones to Diminish Evil! Clicking is your best friend, click the button options carefully to solve the perilous puzzles on your journey! You will only have 3 lives, after that you will start all over so be careful!',
         options: [
             {
                 text: 'Continue!',
-                nextText: 'A'
+                nextText: 'C'
             },
             {
                 text: 'Start New Game!',
-                setState: {},
+                setState: { lives: 3},
                 nextText: 'N'
             }
         ]
@@ -120,10 +120,11 @@ export const story = [
     {
         id: 'N',
         location: 'kingdom',
-        text: 'Queen Elizabeth: Welcome Hero, we need your help,the evil King Shawki is ruling the Kingdom with an iron fist! We need someone who is both brave and smart! You will need to traverse the Kingdom in search of the elemental stones that can make you strong enough to face him! Good Luck and be careful on your long journey Hero!',
+        text: 'Queen Elizabeth: Welcome Hero, we need your help, the evil King Shawki is ruling the Kingdom with an iron fist! We need someone who is both brave and smart! You will need to traverse the kingdom in search of the elemental stones that can make you strong enough to face him! Good Luck and be careful on your long journey Hero!',
         options: [
             {
                 text: 'Start!',
+                setState: { lives: 3 },
                 nextText: 1
             }
         ]
@@ -162,11 +163,11 @@ export const story = [
         text: 'You find yourself in a deep forest, you see a sign that warns of a maze.',
         options: [
             {
-                text: 'Continue Forward!',
+                text: 'Continue forward!',
                 nextText: 'W1M'
             },
             {
-                text: 'Go Back to Map',
+                text: 'Go back to map',
                 nextText: 1
             }
         ]
@@ -201,11 +202,24 @@ export const story = [
     {
         id: 'W1M-E',
         location: 'forest',
-        text: 'You see a bright light shine on you through the path, but alas, you are mysteriously back at the Maze Entrance',
+        text: 'You have unfortunately got yourself lost in the maze, you lost a life TRY AGAIN',
         options: [
             {
-                text: 'Continue',
+                text: 'Continue (Lifes left: 2)',
+                requiredState: (currentState) => currentState.lives === 3,
+                setState: { lives: 2 },
                 nextText: 'W1M'
+            },
+            {
+                text: 'Continue (Lifes left: 1)',
+                requiredState: (currentState) => currentState.lives === 2,
+                setState: { lives: 1 },
+                nextText: 'W1M'
+            },
+            {
+                text: 'GAMEOVER, Start New Game',
+                requiredState: (currentState) => currentState.lives === 1,
+                nextText: 'N'
             }
         ]
     },
