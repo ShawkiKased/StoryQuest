@@ -26,6 +26,14 @@ export const story = [
                 requiredState: (currentState) => currentState.earthStone
             },
             {
+                text: 'Fire Stone',
+                requiredState: (currentState) => currentState.fireStone
+            },
+            {
+                text: 'Water Stone',
+                requiredState: (currentState) => currentState.waterStone
+            },
+            {
                 text: 'Return to Game',
                 nextText: 1
             }
