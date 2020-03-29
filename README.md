@@ -46,11 +46,11 @@ There will be many unique areas in the game, all of which will have different ba
 
 ``document.body.style.backgroundImage = `url(${backgrounds[a]})`;``
 
-* Town Example:
-![TownExample](https://i.imgur.com/jJ1aH3A.jpg)
+* Forest Example:
+![ForestExample](https://i.imgur.com/jJ1aH3A.jpg)
 
-*Forest Example:
-![ForestExample](https://i.imgur.com/XQanU32.png)
+*Town Example:
+![TownExample](https://i.imgur.com/XQanU32.png)
 
 <!-- ## Functionality and MVP's
 
