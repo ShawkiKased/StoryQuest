@@ -351,18 +351,18 @@ export const story = [
     {
         id: 'W1M-2',
         location: 'forest',
-        text: 'You Started Left and find 3 more paths',
+        text: 'You Started left and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-2-1'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-2-2'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-2-3'
             }
 
@@ -371,18 +371,18 @@ export const story = [
     {
         id: 'W1M-2-1',
         location: 'forest',
-        text: 'You went Straight and find 3 more paths',
+        text: 'You went straight and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-E'
             }
         ]
@@ -390,18 +390,18 @@ export const story = [
     {
         id: 'W1M-2-2',
         location: 'forest',
-        text: 'You went Left again and find 3 more paths',
+        text: 'You went left again and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-GB'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-E'
             }
         ]
@@ -409,15 +409,15 @@ export const story = [
     {
         id: 'W1M-GB',
         location: 'forest',
-        text: 'You find a tree, it seems to be carrying Goblin Berries',
+        text: 'You find a tree, it seems to be carrying Goblin berries',
         options: [
             {
-                text: 'Take the Berries and Continue',
+                text: 'Take the berries and continue',
                 setState: { goblinBerry: true },
                 nextText: 'W1M'
             },
             {
-                text: 'Continue without Berries',
+                text: 'Continue without berries',
                 nextText: 'W1M'
             }
         ]
@@ -428,15 +428,15 @@ export const story = [
         text: 'You went Right and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-E'
             }
         ]
@@ -444,18 +444,18 @@ export const story = [
     {
         id: 'W1M-3',
         location: 'forest',
-        text: 'You Started Right and find 3 more paths',
+        text: 'You Started right and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-3-1'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-3-2'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-3-3'
             }
         ]
@@ -463,18 +463,18 @@ export const story = [
     {
         id: 'W1M-3-1',
         location: 'forest',
-        text: 'You went Straight and find 3 more paths',
+        text: 'You went straight and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-E'
             }
         ]
@@ -482,18 +482,18 @@ export const story = [
     {
         id: 'W1M-3-2',
         location: 'forest',
-        text: 'You went Left and find 3 more paths',
+        text: 'You went left and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-E'
             }
         ]
@@ -501,18 +501,18 @@ export const story = [
     {
         id: 'W1M-3-3',
         location: 'forest',
-        text: 'You went Right again and find 3 more paths',
+        text: 'You went right again and find 3 more paths',
         options: [
             {
-                text: 'Continue Straight',
+                text: 'Continue straight',
                 nextText: 'W1M-E'
             },
             {
-                text: 'Continue Left',
+                text: 'Continue left',
                 nextText: 'W1M-SF'
             },
             {
-                text: 'Continue Right',
+                text: 'Continue right',
                 nextText: 'W1M-E'
             }
         ]
@@ -520,15 +520,15 @@ export const story = [
     {
         id: 'W1M-SF',
         location: 'forest',
-        text: 'You find a tree, and it seems to contain Star Fruit',
+        text: 'You find a tree, and it seems to contain Star fruit',
         options: [
             {
-                text: 'Take the Star Fruit and Continue',
+                text: 'Take the star fruit and continue',
                 setState: { starFruit: true },
                 nextText: 'W1M'
             },
             {
-                text: 'Continue without taking Star Fruit',
+                text: 'Continue without taking star fruit',
                 nextText: 'W1M'
             }
         ]
@@ -539,16 +539,16 @@ export const story = [
         text: 'Goblin: I know the way through the maze, but i require something delicious',
         options: [
             {
-                text: 'Maze Entrance',
+                text: 'Maze entrance',
                 nextText: 'W1M'
             },
             {
-                text: 'Give Goblin GoblinBerries',
+                text: 'Give goblin goblin berries',
                 requiredState: (currentState) => currentState.goblinBerry,
                 nextText: 'W1GE'
             },
             {
-                text: 'Ask about Mirror Of Truth',
+                text: 'Ask about Mirror of truth',
                 requiredState: (currentState) => currentState.advice,
                 nextText: 'W1G2'
             }
@@ -557,7 +557,7 @@ export const story = [
     {
         id: 'W1GE',
         location: 'forest',
-        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH* STRAIGHT *MUNCH MUNCH MUNCH* RIGHT *MUNCH MUNCH MUNCH* LEFT *MUNCH MUNCH MUNCH MUNCH, PLEASE TAKE MY BLESSING*',
+        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH* straight *MUNCH MUNCH MUNCH* right *MUNCH MUNCH MUNCH* left *MUNCH MUNCH MUNCH MUNCH* take my blessing!',
         options: [
             {
                 text: 'Continue',
@@ -569,14 +569,14 @@ export const story = [
     {
         id: 'W1G2',
         location: 'forest',
-        text: 'Goblin: Oh, for THAT im gonna need TWO Delicious things at the same time, hehehe',
+        text: 'Goblin: Oh, for THAT im gonna need TWO delicious things at the same time, hehehe',
         options: [
             {
-                text: 'Return to Maze',
+                text: 'Return to maze',
                 nextText: 'W1M'
             },
             {
-                text: 'Give Both Goblin Berries and Star Fruit',
+                text: 'Give both goblin berries and star fruit',
                 requiredState: (currentState) => currentState.starFruit && currentState.goblinBerry,
                 nextText: 'W1G3'
             }
@@ -585,7 +585,7 @@ export const story = [
     {
         id: 'W1G3',
         location: 'forest',
-        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* SO DELICIOUS *MUNCH MUNCH MUNCH MUNCH MUNCH* SO JUICY *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* Okay Okay Okay okay, listen carefully, have you been to the mines? Theres a giant hole with some creature in it. Your going to have to give him Golden Goblin Berries, he really hates normal ones. I heard you can find them deep in the caves, near the FireStone. Try looking for something suspicious',
+        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* so delicious *MUNCH MUNCH MUNCH MUNCH MUNCH* so juicy *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* Okay okay okay okay, listen carefully, have you been to the mines? Theres a giant hole with some creature in it. Your going to have to give him golden goblin berries, he really hates normal ones. I heard you can find them deep in the caves, near the fire stone. Try looking for something suspicious',
         options: [
             {
                 text: 'Return to Maze',
@@ -600,11 +600,11 @@ export const story = [
         text: 'You went inside the cave, however it is really dark and impossible to see forward',
         options: [
             {
-                text: 'Return to Map',
+                text: 'Return to map',
                 nextText: 1
             },
             {
-                text: 'Use Lantern',
+                text: 'Use lantern',
                 requiredState: (currentState) => currentState.lanturn,
                 nextText: 'W2-'
             }
@@ -624,30 +624,30 @@ export const story = [
     {
         id: 'W2E',
         location: 'mine',
-        text: 'Going deeper in the cave, you find yourself in the Mines. There are 2 two paths and a minecart in the middle',
+        text: 'Going deeper in the cave, you find yourself in the mines. There are 2 paths and a minecart in the middle',
         options: [
             {
-                text: 'Go to the Left',
+                text: 'Go to the left',
                 requiredState: (currentState) => !currentState.lever,
                 nextText: 'W2L1'
             },
             {
-                text: 'Go to the Left',
+                text: 'Go to the left',
                 requiredState: (currentState) => currentState.lever,
                 nextText: 'W2L3'
             },
             {
-                text: 'Get closer to the Minecart',
+                text: 'Get closer to the minecart',
                 requiredState: (currentState) => !currentState.minecart,
                 nextText: 'W2M'
             },
             {
-                text: 'Get Closer to the Minecart',
+                text: 'Get closer to the minecart',
                 requiredState: (currentState) => currentState.minecart,
                 nextText: 'W2MS'
             },
             {
-                text: 'Go to the Right',
+                text: 'Go to the right',
                 nextText: 'W2R'
             },
             {
@@ -659,14 +659,14 @@ export const story = [
     {
         id: 'W2L1',
         location: 'mine',
-        text: 'You come closer to the left Path but a big boulder is blocking the way, your going to need to smash it somehow',
+        text: 'You come closer to the left path but a big boulder is blocking the way, your going to need to smash it somehow',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W2E'
             },
             {
-                text: 'Use Hammer',
+                text: 'Use hammer',
                 requiredState: (currentState) => currentState.hammer,
                 nextText: 'W2L2'
             }
@@ -686,10 +686,10 @@ export const story = [
     {
         id: 'W2L2',
         location: 'mine',
-        text: 'You use your Hammer to smash the boulder into pieces. Behind it lays a minecart lever',
+        text: 'You use your hammer to smash the boulder into pieces. Behind it lays a minecart lever',
         options: [
             {
-                text: 'Take Minecart Lever',
+                text: 'Take minecart lever',
                 setState: { lever: true },
                 nextText: 'W2E'
             }
@@ -699,14 +699,14 @@ export const story = [
     {
         id: 'W2M',
         location: 'mine',
-        text: 'You came closer to the Minecart, looks like it could be rideable, but the lever is missing',
+        text: 'You come closer to the minecart, looks like you could ride it, but the lever is missing',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W2E'
             },
             {
-                text: 'Place Lever',
+                text: 'Place lever',
                 requiredState: (currentState) => currentState.lever,
                 nextText: 'W2M2'
             }
@@ -716,7 +716,7 @@ export const story = [
     {
         id: 'W2M2',
         location: 'mine',
-        text: 'You placed the Lever in the Minecart, you can now ride on it',
+        text: 'You placed the lever in the minecart, you can now ride on it',
         options: [
             {
                 text: 'Continue',
@@ -728,10 +728,10 @@ export const story = [
     {
         id: 'W2MS',
         location: 'mine',
-        text: 'Would you like to ride the Minecart?',
+        text: 'Would you like to ride the minecart?',
         options: [
             {
-                text: 'Ride the Minecart',
+                text: 'Ride the minecart',
                 nextText: 'W2MS-'
             },
             {
@@ -743,7 +743,7 @@ export const story = [
     {
         id: 'W2MS-',
         location: 'mine',
-        text: 'You got on the Minecart and rode forward, its time to be careful, proceed with caution...',
+        text: 'You got on the minecart and rode forward, its time to be careful, proceed with caution...',
         options: [
             {
                 text: 'Continue',
@@ -754,7 +754,7 @@ export const story = [
     {
         id: 'W2MSF',
         location: 'mine',
-        text: 'You crashed and got knocked out......Try Again',
+        text: 'You crashed and got knocked out......try again',
         options: [
             {
                 text: 'Continue',
@@ -776,7 +776,7 @@ export const story = [
                 nextText: 'W2MSF'
             },
             {
-                text: 'Use your Hammer',
+                text: 'Use your hammer',
                 nextText: 'W2MSF'
             },
             {
@@ -799,7 +799,7 @@ export const story = [
                 nextText: 'W2MS3'
             },
             {
-                text: 'Use your Hammer',
+                text: 'Use your hammer',
                 nextText: 'W2MSF'
             },
             {
@@ -822,7 +822,7 @@ export const story = [
                 nextText: 'W2MSF'
             },
             {
-                text: 'Use your Hammer',
+                text: 'Use your hammer',
                 nextText: 'W2MSF'
             },
             {
@@ -834,7 +834,7 @@ export const story = [
     {
         id: 'W2MS4',
         location: 'mine',
-        text: 'You didnt do anything and the trolls end up crashing into each other. Behind you is a minecart with a bomb coming close to you and following behind....',
+        text: 'You didnt do anything and the trolls end up crashing into each other. Behind you is a minecart with a bomb following behind....',
         options: [
             {
                 text: 'Change the track',
@@ -845,7 +845,7 @@ export const story = [
                 nextText: 'W2MSF'
             },
             {
-                text: 'Use your Hammer',
+                text: 'Use your hammer',
                 nextText: 'W2MS5'
             },
             {
@@ -857,7 +857,7 @@ export const story = [
     {
         id: 'W2MS5',
         location: 'mine',
-        text: 'You used your Hammer to knock the bomb out of the incoming cart. Your minecart has reached its destination, the stress is over.',
+        text: 'You used your hammer to knock the bomb out of the incoming cart. Your minecart has reached its destination, the stress is over.',
         options: [
             {
                 text: 'Continue',
@@ -874,10 +874,10 @@ export const story = [
     {
         id: 'W2MSEnd',
         location: 'mine',
-        text: 'You reached a pedastal......It has the FireStone in it, HUZZAH!',
+        text: 'You reached a pedastal......It has the Fire stone in it, HUZZAH!',
         options: [
             {
-                text: 'Ride Minecart Back',
+                text: 'Ride minecart back',
                 setState: { fireStone: true },
                 nextText: 'W2E'
             }
@@ -886,19 +886,19 @@ export const story = [
     {
         id: 'W2MSEnd2',
         location: 'mine',
-        text: 'You have already taken the FireStone, the only thing here is the pedastal and a wall',
+        text: 'You have already taken the Fire stone, the only thing here is the pedastal and a wall',
         options: [
             {
-                text: 'Ride Minecart Back',
+                text: 'Ride minecart back',
                 nextText: 'W2E'
             },
             {
-                text: 'Observe Wall',
+                text: 'Observe wall',
                 requiredState: (currentState) => currentState.goblinAdvice && !currentState.wall,
                 nextText: 'W2W'
             },
             {
-                text: 'Observe Broken Wall',
+                text: 'Observe broken wall',
                 requiredState: (currentState) => currentState.wall,
                 nextText: 'W2W3'
             }
@@ -910,11 +910,11 @@ export const story = [
         text: 'You observed the wall, there seems to be a crack',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W2MSEnd2'
             },
             {
-                text: 'Use your Hammer on the crack',
+                text: 'Use your hammer on the crack',
                 nextText: 'W2W2'
             }
         ]
@@ -922,7 +922,7 @@ export const story = [
     {
         id: 'W2W2',
         location: 'mine',
-        text: 'You used your Hammer on the crack, you busted a hole and see that theres a room behind it. You smashed it again and busted a new room',
+        text: 'You used your hammer on the crack, you busted a hole and see that theres a room behind it. You smashed it again and busted a new room',
         options: [
             {
                 text: 'Continue',
@@ -934,10 +934,10 @@ export const story = [
     {
         id: 'W2W3',
         location: 'mine',
-        text: 'You come up to a new room with a golden tree, it contains Gold Goblin Berries',
+        text: 'You come up to a new room with a golden tree, it contains gold goblin berries',
         options: [
             {
-                text: 'Grab Golden Berries and Go Back',
+                text: 'Grab golden berries and go back',
                 setState: { goldenBerry: true },
                 nextText: 'W2MSEnd2'
             }
@@ -946,24 +946,24 @@ export const story = [
     {
         id: 'W2R',
         location: 'mine',
-        text: 'You find a big hole in the ground, it seems dangerous, but as you come close, you hear a faint voice......"Feed Me"',
+        text: 'You find a big hole in the ground, it seems dangerous, but as you come close, you hear a faint voice......"Feed me"',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'W2E'
             },
             {
-                text: 'Throw Goblin Berries in the hole',
+                text: 'Throw goblin berries in the hole',
                 requiredState: (currentState) => currentState.goblinBerry,
                 nextText: 'W2RG1'
             },
             {
-                text: 'Throw Star Fruit in the hole',
+                text: 'Throw star fruit in the hole',
                 requiredState: (currentState) => currentState.starFruit && (!currentState.rubyGem && !currentState.hammer),
                 nextText: 'W2RS1'
             },
             {
-                text: 'Throw Golden Goblin Berries in the hole',
+                text: 'Throw golden goblin berries in the hole',
                 requiredState: (currentState) => currentState.goldenBerry,
                 nextText: 'W2RGG'
             }
@@ -972,7 +972,7 @@ export const story = [
     {
         id: 'W2RG1',
         location: 'mine',
-        text: 'You threw the Goblin Berries in the hole.....................',
+        text: 'You threw the goblin berries in the hole.....................',
         options: [
             {
                 text: 'Continue',
@@ -995,7 +995,7 @@ export const story = [
     {
         id: 'W2RS1',
         location: 'mine',
-        text: 'You threw the Star Fruit in the hole........................',
+        text: 'You threw the star fruit in the hole........................',
         options: [
             {
                 text: 'Continue',
@@ -1007,10 +1007,10 @@ export const story = [
     {
         id: 'W2RS2',
         location: 'mine',
-        text: 'You hear the voice again, "THANK YOU, IM STARVING, TAKE THIS", the Ruby Gem is thrown out of hole!',
+        text: 'You hear the voice again, "THANK YOU, IM STARVING, TAKE THIS", the Ruby gem is thrown out of hole!',
         options: [
             { 
-                text: 'Take Ruby Gem',
+                text: 'Take ruby gem',
                 setState: { rubyGem: true },
                 nextText: 'W2E'
             }
@@ -1019,7 +1019,7 @@ export const story = [
     {
         id: 'W2RGG',
         location: 'mine',
-        text: 'You threw the Golden Goblin Berries in the hole...............',
+        text: 'You threw the golden goblin berries in the hole...............',
         options: [
             {
                 text: 'Continue',
@@ -1031,10 +1031,10 @@ export const story = [
     {
         id: 'W2RGG2',
         location: 'mine',
-        text: 'You hear the voice again, "OH MY GOD, OOOOOOOH MYYYYY GOOOOOOD, GOLDEN GOBLIN BERRIES? AWWWWW YEEEEEEEEEEESSS THANK YOU, TAKE THIS, AND BE CAREFUL OF THE MONSTERS NEAR THE WELL", the Mirror Of Truth was thrown out of the hole',
+        text: 'You hear the voice again, "OH MY GOD, OOOOOOOH MYYYYY GOOOOOOD, GOLDEN GOBLIN BERRIES? AWWWWW YEEEEEEEEEEESSS THANK YOU, TAKE THIS, AND BE CAREFUL OF THE MONSTERS NEAR THE WELL", the Mirror Of truth was thrown out of the hole',
         options: [
             {
-                text: 'Take Mirror Of Truth',
+                text: 'Take mirror Of truth',
                 setState: { mirror: true },
                 nextText: 'W2E'
             }
@@ -1046,15 +1046,15 @@ export const story = [
         text: 'You went to the village, there are plenty of people to see, what would you like to do?',
         options: [
             {
-                text: 'Go to the Shop',
+                text: 'Go to the shop',
                 nextText: 'V-S'
             },
             {
-                text: 'Talk to the Village Folk',
+                text: 'Talk to the village folk',
                 nextText: 'V-P'
             },
             {
-                text: 'Go Back to Map',
+                text: 'Go back to map',
                 nextText: 1
             }
         ]
@@ -1062,7 +1062,7 @@ export const story = [
     {
         id: 'V-S',
         location: 'village',
-        text: 'ShopKeeper: Welcome Hero! Take a look at my wares, anything fits your fancy for your Adventure?',
+        text: 'ShopKeeper: Welcome Hero! Take a look at my wares, anything fits your fancy for your adventure?',
         options: [
             {
                 text: 'Lanturn',
@@ -1075,11 +1075,11 @@ export const story = [
                 nextText: 'V-SH'
             },
             {
-                text: 'Life Potion',
+                text: 'Life potion',
                 nextText: 'V-SP'
             },
             {
-                text: 'Nothing, Thank You',
+                text: 'Nothing, thank you',
                 nextText: 'V'
             }
         ]
@@ -1094,7 +1094,7 @@ export const story = [
                 nextText: 'V-S'
             },
             {
-                text: 'Trade Star Fruit for Lanturn',
+                text: 'Trade star fruit for lanturn',
                 requiredState: (currentState) => currentState.starFruit,
                 setState: { starFruit: false, lanturn: true},
                 nextText: 'V-S'
@@ -1104,14 +1104,14 @@ export const story = [
     {
         id: 'V-SH',
         location: 'village',
-        text: 'ShopKeeper: I will trade you a Hammer for a Ruby Gem',
+        text: 'ShopKeeper: I will trade you a hammer for a ruby gem',
         options: [
             {
                 text: 'Back',
                 nextText: 'V-S'
             },
             {
-                text: 'Trade Ruby Gem for Hammer',
+                text: 'Trade ruby gem for hammer',
                 requiredState: (currentState) => currentState.rubyGem,
                 setState: { rubyGem: false, hammer: true },
                 nextText: 'V-S'
@@ -1121,14 +1121,14 @@ export const story = [
     {
         id: 'V-SP',
         location: 'village',
-        text: 'ShopKeeper: I will trade you a Life Potion for a Dark Gem',
+        text: 'ShopKeeper: I will trade you a life potion for a dark gem',
         options: [
             {
                 text: 'Back',
                 nextText: 'V-S'
             },
             {
-                text: 'Trade Dark Gem for Life Potion',
+                text: 'Trade dark gem for life potion',
                 requiredState: (currentState) => currentState.darkGem,
                 setState: { darkGem: false, lifePotion: true },
                 nextText: 'V-SP2'
@@ -1138,7 +1138,7 @@ export const story = [
     {
         id: 'V-SP2',
         location: 'village',
-        text: 'ShopKeeper: Here you go, Keep in mind you can only use this once, if you want another, you will need to find me another Dark Gem',
+        text: 'ShopKeeper: Here you go, keep in mind you can only use this once, if you want another, you will need to find me another dark gem',
         options: [
             {
                 text: 'Thank you',
@@ -1152,12 +1152,12 @@ export const story = [
         text: 'You go to the center of the village and see the village folk doing their daily routines. Who would you like to talk to?',
         options: [
             {
-                text: 'Lovely Couple by the well',
+                text: 'Lovely couple by the well',
                 requiredState: (currentState) => !currentState.well,
                 nextText: 'V-PL'
             },
             {
-                text: 'To the Well',
+                text: 'To the well',
                 requiredState: (currentState) => currentState.well,
                 nextText: 'V-PW'
             },
@@ -1166,11 +1166,11 @@ export const story = [
                 nextText: 'V-PK'
             },
             {
-                text: 'Wise Old Man reading',
+                text: 'Wise old man',
                 nextText: 'V-PO'
             },
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'V'
             }
         ]
@@ -1178,14 +1178,14 @@ export const story = [
     {
         id: 'V-PL',
         location: 'village',
-        text: 'Lovely Couple: Can you not bother us please? We are enjoying our company in these dark days',
+        text: 'Lovely couple: Can you not bother us please? We are enjoying our company in these dark days',
         options: [
             {
-                text: 'Go Back',
+                text: 'Go back',
                 nextText: 'V-P'
             },
             {
-                text: 'Use the Mirror Of Truth',
+                text: 'Use the mirror Of truth',
                 requiredState: (currentState) => currentState.mirror,
                 nextText: 'VPLW'
             }
