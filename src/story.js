@@ -34,6 +34,18 @@ export const story = [
                 requiredState: (currentState) => currentState.waterStone
             },
             {
+                text: 'Goblin Berries',
+                requiredState: (currentState) => currentState.goblinBerry
+            },
+            {
+                text: 'Star Fruit',
+                requiredState: (currentState) => currentState.starFruit
+            },
+            {
+                text: 'Goblins Blessing',
+                requiredState: (currentState) => currentState.goblinBlessing
+            },
+            {
                 text: 'Return to Game',
                 nextText: 1
             }
