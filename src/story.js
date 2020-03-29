@@ -46,6 +46,22 @@ export const story = [
                 requiredState: (currentState) => currentState.goblinBlessing
             },
             {
+                text: 'Lanturn',
+                requiredState: (currentState) => currentState.lanturn
+            },
+            {
+                text: 'Ruby Gem',
+                requiredState: (currentState) => currentState.rubyGem
+            },
+            {
+                text: 'Hammer',
+                requiredState: (currentState) => currentState.hammer
+            },
+            {
+                text: 'Lever',
+                requiredState: (currentState) => currentState.lever
+            },
+            {
                 text: 'Return to Game',
                 nextText: 1
             }
