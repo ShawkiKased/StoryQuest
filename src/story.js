@@ -22,6 +22,25 @@ export const story = [
         text: 'Heres what you current have on you:',
         options: [
             {
+                text: 'Key Items',
+                nextText: 'IK'
+            },
+            {
+                text: 'Tradeable/Disposable Items',
+                nextText: 'IT'
+            },
+            {
+                text: 'Return to Game',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        id: 'IK',
+        location: 'inventory',
+        text: 'Inventory: Key Items',
+        options: [
+            {
                 text: 'Earth Stone',
                 requiredState: (currentState) => currentState.earthStone
             },
@@ -34,14 +53,6 @@ export const story = [
                 requiredState: (currentState) => currentState.waterStone
             },
             {
-                text: 'Goblin Berries',
-                requiredState: (currentState) => currentState.goblinBerry
-            },
-            {
-                text: 'Star Fruit',
-                requiredState: (currentState) => currentState.starFruit
-            },
-            {
                 text: 'Goblins Blessing',
                 requiredState: (currentState) => currentState.goblinBlessing
             },
@@ -50,20 +61,8 @@ export const story = [
                 requiredState: (currentState) => currentState.lanturn
             },
             {
-                text: 'Ruby Gem',
-                requiredState: (currentState) => currentState.rubyGem
-            },
-            {
                 text: 'Hammer',
                 requiredState: (currentState) => currentState.hammer
-            },
-            {
-                text: 'Lever',
-                requiredState: (currentState) => currentState.lever
-            },
-            {
-                text: 'Golden Goblin Berries',
-                requiredState: (currentState) => currentState.goldenBerry
             },
             {
                 text: 'Mirror of Truth',
@@ -74,6 +73,37 @@ export const story = [
                 requiredState: (currentState) => currentState.book
             },
             {
+                text: 'Go Back',
+                nextText: 'I'
+            }
+        ]
+    },
+    {
+        id: 'IT',
+        location: 'inventory',
+        text: 'Inventory: Tradeable/Disposable Items',
+        options:[
+            {
+                text: 'Goblin Berries',
+                requiredState: (currentState) => currentState.goblinBerry
+            },
+            {
+                text: 'Star Fruit',
+                requiredState: (currentState) => currentState.starFruit
+            },
+            {
+                text: 'Ruby Gem',
+                requiredState: (currentState) => currentState.rubyGem
+            },
+            {
+                text: 'Lever',
+                requiredState: (currentState) => currentState.lever
+            },
+            {
+                text: 'Golden Goblin Berries',
+                requiredState: (currentState) => currentState.goldenBerry
+            },
+            {
                 text: 'Dark Gem',
                 requiredState: (currentState) => currentState.darkGem
             },
@@ -82,8 +112,8 @@ export const story = [
                 requiredState: (currentState) => currentState.lifePotion
             },
             {
-                text: 'Return to Game',
-                nextText: 1
+                text: 'Go Back',
+                nextText: 'I'
             }
         ]
     },
