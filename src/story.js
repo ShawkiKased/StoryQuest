@@ -62,6 +62,26 @@ export const story = [
                 requiredState: (currentState) => currentState.lever
             },
             {
+                text: 'Golden Goblin Berries',
+                requiredState: (currentState) => currentState.goldenBerry
+            },
+            {
+                text: 'Mirror of Truth',
+                requiredState: (currentState) => currentState.mirror
+            },
+            {
+                text: 'Book',
+                requiredState: (currentState) => currentState.book
+            },
+            {
+                text: 'Dark Gem',
+                requiredState: (currentState) => currentState.darkGem
+            },
+            {
+                text: 'Life Potion',
+                requiredState: (currentState) => currentState.lifePotion
+            },
+            {
                 text: 'Return to Game',
                 nextText: 1
             }
@@ -653,7 +673,7 @@ export const story = [
         options: [
             {
                 text: 'Continue',
-                setState: { minecart: true},
+                setState: { minecart: true, lever: false},
                 nextText: 'W2MS'
             }
         ]
@@ -1587,6 +1607,7 @@ export const story = [
         options: [
             {
                 text: 'Look at the pot',
+                setState: { glass: false },
                 nextText: 'W3F3'
             }
         ]
