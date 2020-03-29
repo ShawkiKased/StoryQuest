@@ -5,10 +5,10 @@ export const story = [
         location: 'kingdom',
         text: '*Instructions* Welcome to StoryQuest! A Text Based Puzzle/Adventure Game! Navigate through the world in search of Sacred Stones to Diminish Evil! Clicking is your best friend, click the button options carefully to solve the perilous puzzles on your journey! You will only have 3 lives, after that you will start all over so be careful!',
         options: [
-            {
-                text: 'Continue!',
-                nextText: 'C'
-            },
+            // {
+            //     text: 'Continue!',
+            //     nextText: 'C'
+            // },
             {
                 text: 'Start New Game!',
                 setState: { lives: 3},
