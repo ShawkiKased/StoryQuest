@@ -41,15 +41,15 @@ export const story = [
         text: 'Inventory: Key items',
         options: [
             {
-                text: 'Earth stone',
+                text: 'Earth Stone',
                 requiredState: (currentState) => currentState.earthStone
             },
             {
-                text: 'Fire stone',
+                text: 'Fire Stone',
                 requiredState: (currentState) => currentState.fireStone
             },
             {
-                text: 'Water stone',
+                text: 'Water Stone',
                 requiredState: (currentState) => currentState.waterStone
             },
             {
@@ -57,7 +57,8 @@ export const story = [
                 requiredState: (currentState) => currentState.goblinBlessing
             },
             {
-                text: 'Note: "Right Right Left"'
+                text: 'Note: "Right Right Left"',
+                requiredState: (currentState)
             },
             {
                 text: 'Lanturn',
@@ -305,15 +306,15 @@ export const story = [
     {
         id: 'W1M-S',
         location: 'forest',
-        text: 'You find yourself....in a field of flowers, in front of you is a pedastal which seems to contain the Earth stone',
+        text: 'You find yourself....in a field of flowers, in front of you is a pedastal which seems to contain the Earth Stone',
         options: [
             {
-                text: 'Grab Earth stone',
+                text: 'Grab Earth Stone',
                 requiredState: (currentState) => !currentState.earthStone && !currentState.goblinBlessing,
                 nextText: 'W1M-S1'
             },
             {
-                text: 'Grab Earth stone',
+                text: 'Grab Earth Stone',
                 requiredState: (currentState) => currentState.goblinBlessing && !currentState.earthStone,
                 nextText: 'W1M-S2'
             },
@@ -585,7 +586,7 @@ export const story = [
     {
         id: 'W1G3',
         location: 'forest',
-        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* so delicious *MUNCH MUNCH MUNCH MUNCH MUNCH* so juicy *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* Okay okay okay okay, listen carefully, have you been to the mines? Theres a giant hole with some creature in it. Your going to have to give him golden goblin berries, he really hates normal ones. I heard you can find them deep in the caves, near the fire stone. Try looking for something suspicious',
+        text: 'Goblin: *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* so delicious *MUNCH MUNCH MUNCH MUNCH MUNCH* so juicy *MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH MUNCH* Okay okay okay okay, listen carefully, have you been to the mines? Theres a giant hole with some creature in it. Your going to have to give him golden goblin berries, he really hates normal ones. I heard you can find them deep in the caves, near the Fire Stone. Try looking for something suspicious',
         options: [
             {
                 text: 'Return to Maze',
@@ -754,11 +755,24 @@ export const story = [
     {
         id: 'W2MSF',
         location: 'mine',
-        text: 'You crashed and got knocked out......try again',
+        text: 'You crashed and got knocked out......TRY AGAIN',
         options: [
             {
-                text: 'Continue',
-                nextText: 1
+                text: 'Continue (Lifes left: 2)',
+                requiredState: (currentState) => currentState.lives === 3,
+                setState: { lives: 2 },
+                nextText: 'W2E'
+            },
+            {
+                text: 'Continue (Lifes left: 1)',
+                requiredState: (currentState) => currentState.lives === 2,
+                setState: { lives: 1 },
+                nextText: 'W2E'
+            },
+            {
+                text: 'GAMEOVER, start new game',
+                requiredState: (currentState) => currentState.lives === 1,
+                nextText: 'N'
             }
         ]
     },
@@ -874,7 +888,7 @@ export const story = [
     {
         id: 'W2MSEnd',
         location: 'mine',
-        text: 'You reached a pedastal......It has the Fire stone in it, HUZZAH!',
+        text: 'You reached a pedastal......It has the Fire Stone in it, HUZZAH!',
         options: [
             {
                 text: 'Ride minecart back',
@@ -886,7 +900,7 @@ export const story = [
     {
         id: 'W2MSEnd2',
         location: 'mine',
-        text: 'You have already taken the Fire stone, the only thing here is the pedastal and a wall',
+        text: 'You have already taken the Fire Stone, the only thing here is the pedastal and a wall',
         options: [
             {
                 text: 'Ride minecart back',
@@ -1205,11 +1219,24 @@ export const story = [
     {
         id: 'VPLWF',
         location: 'village',
-        text: 'Bad choice, the monsters managed to attack you and knock you out...........Try Again',
+        text: 'Bad choice, the monsters managed to attack you and knock you out...........TRY AGAIN',
         options: [
             {
-                text: 'Continue',
-                nextText: 1
+                text: 'Continue (Lifes left: 2)',
+                requiredState: (currentState) => currentState.lives === 3,
+                setState: { lives: 2 },
+                nextText: 'V'
+            },
+            {
+                text: 'Continue (Lifes left: 1)',
+                requiredState: (currentState) => currentState.lives === 2,
+                setState: { lives: 1 },
+                nextText: 'V'
+            },
+            {
+                text: 'GAMEOVER, start new game',
+                requiredState: (currentState) => currentState.lives === 1,
+                nextText: 'N'
             }
         ]
     },
@@ -1558,8 +1585,21 @@ export const story = [
         text: 'You tried to swim your way downstairs, unfortunately, you could not hold your breath for too long and drowned......TRY AGAIN',
         options: [
             {
-                text: 'Restart',
-                nextText: 1
+                text: 'Continue (Lifes left: 2)',
+                requiredState: (currentState) => currentState.lives === 3,
+                setState: { lives: 2 },
+                nextText: 'W3LSS'
+            },
+            {
+                text: 'Continue (Lifes left: 1)',
+                requiredState: (currentState) => currentState.lives === 2,
+                setState: { lives: 1 },
+                nextText: 'W3LSS'
+            },
+            {
+                text: 'GAMEOVER, start new game',
+                requiredState: (currentState) => currentState.lives === 1,
+                nextText: 'N'
             }
         ]
     },
@@ -1746,8 +1786,21 @@ export const story = [
         text: 'You were pretty thirsty so you decided to drink the glass of what your assuming is water.....................Unfortunately it wasnt drinkable and you got poisoned. TRY AGAIN',
         options: [
             {
-                text: 'Continue',
-                nextText: 1
+                text: 'Continue (Lifes left: 2)',
+                requiredState: (currentState) => currentState.lives === 3,
+                setState: { lives: 2 },
+                nextText: 'W3'
+            },
+            {
+                text: 'Continue (Lifes left: 1)',
+                requiredState: (currentState) => currentState.lives === 2,
+                setState: { lives: 1 },
+                nextText: 'W3'
+            },
+            {
+                text: 'GAMEOVER, start new game',
+                requiredState: (currentState) => currentState.lives === 1,
+                nextText: 'N'
             }
         ]
     },
