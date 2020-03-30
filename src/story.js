@@ -58,7 +58,7 @@ export const story = [
             },
             {
                 text: 'Note: "Right Right Left"',
-                requiredState: (currentState)
+                requiredState: (currentState) => currentState.note
             },
             {
                 text: 'Lanturn',
@@ -1021,7 +1021,7 @@ export const story = [
     {
         id: 'W2RS2',
         location: 'mine',
-        text: 'You hear the voice again, "THANK YOU, IM STARVING, TAKE THIS", the Ruby gem is thrown out of hole!',
+        text: 'You hear the voice again, "THANK YOU, IM STARVING, TAKE THIS", the ruby gem is thrown out of hole!',
         options: [
             { 
                 text: 'Take ruby gem',
