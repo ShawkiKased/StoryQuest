@@ -12,11 +12,18 @@
 </head>
 <body>
 
- <iframe src="./src/music/silence.mp3" autoplay id="audio" style="display: none"></iframe>
+ <audio id="myAudio">
+   <source src="./src/music/forest.mp3">
+ </audio>
+
+ <button onClick="playAudio()" type="button">Play Audio</button>
+ <button onClick="pauseAudio()" type="button">Pause Audio</button>
+ 
+ <!-- <iframe src="./src/music/silence.mp3" autoplay id="audio" style="display: none"></iframe>
 
  <audio id="player" autoplay loop controls style="width: 99px; height: 20px;">
    <source src="./src/music/forest.mp3" type="audio/mp3">
- </audio>
+ </audio> -->
 
   <div class="header">
     <h1 class="title">STORYQUEST</h1>
