@@ -35,7 +35,7 @@ I used a state object that will be used to carry the true or false values of wha
 ``
 
 * Cave without Lanturn:
-![CaveExample](https://i.imgur.com/9HKZAhl.png)
+![CaveExample](https://i.imgur.com/bqgsflm.png)
 
 * Cave with Lanturn:
 ![CaveExample2](https://i.imgur.com/vpOr5S9.png)
