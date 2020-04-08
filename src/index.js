@@ -5,7 +5,6 @@ window.addEventListener("DOMContentLoaded", () => {
   const textElement = document.getElementById('text')
   const optionButtonsElement = document.getElementById('option-buttons')
   let state = {}
-
   function startGame() {
 
     // let curState = JSON.parse(localStorage.getItem('cState'))

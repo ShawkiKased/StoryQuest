@@ -13,12 +13,12 @@
 <body>
 
  <audio id="myAudio">
-   <source src="./src/music/forest.mp3">
+   <source src="./src/music/forest.mp3" type="audio/mp3">
  </audio>
 
  <button onClick="playAudio()" type="button">Play Audio</button>
  <button onClick="pauseAudio()" type="button">Pause Audio</button>
- 
+
  <!-- <iframe src="./src/music/silence.mp3" autoplay id="audio" style="display: none"></iframe>
 
  <audio id="player" autoplay loop controls style="width: 99px; height: 20px;">
@@ -29,6 +29,17 @@
     <h1 class="title">STORYQUEST</h1>
   </div>
   <script src="./dist/main.js"></script>
+  <script>
+    let x = document.getElementById("myAudio");
+
+    function playAudio() {
+      x.play();
+    }
+
+    function pauseAudio() {
+      x.pause();
+    }
+  </script>
   <div class="container">
     <div id="text">Text</div>
     <div id="option-buttons" class="btn-grid">
